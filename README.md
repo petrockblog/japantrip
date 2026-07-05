@@ -1,33 +1,28 @@
 # Japan Reiseplan 2026 – GitHub Pages
 
-Dies ist eine kleine statische Web-App für den Tokyo-Familienreiseplan vom 7.–22. Juli 2026.
+Aktualisierte Version mit Uhrzeiten pro Tag und Links direkt an den einzelnen Zeitblöcken.
 
-## Dateien
+## Dateien hochladen
 
-- `index.html` – die eigentliche App
-- `manifest.webmanifest` – Home-Screen-/PWA-Metadaten
-- `sw.js` – Offline-Cache nach dem ersten Laden
-- `icon.svg` – App-Symbol
+Lade diese Dateien direkt in den Root des Repositories `petrockblog/Japantrip`:
 
-## Veröffentlichung mit GitHub Pages
+- `index.html`
+- `manifest.webmanifest`
+- `sw.js`
+- `icon.svg`
+- `README.md`
 
-1. Neues GitHub-Repository erstellen, z. B. `japan-reiseplan`.
-2. Diese vier Dateien in das Repository hochladen.
-3. In GitHub öffnen: **Settings → Pages**.
-4. Bei **Build and deployment** auswählen:
-   - Source: **Deploy from a branch**
-   - Branch: **main**
-   - Folder: **/root**
-5. Speichern.
-6. Nach kurzer Zeit ist die Seite verfügbar unter:
-   `https://DEIN-USERNAME.github.io/japan-reiseplan/`
+Danach ist die Seite unter folgender Adresse erreichbar:
 
-## Auf iPhone Home Screen legen
+`https://petrockblog.github.io/Japantrip/`
 
-1. Die GitHub-Pages-URL in **Safari** öffnen.
-2. Teilen-Symbol antippen.
-3. **Zum Home-Bildschirm** wählen.
-4. Name z. B. `Japan Plan`.
-5. Hinzufügen.
+## Wichtig bei Updates
 
-Danach öffnet sich der Reiseplan wie eine kleine App.
+Falls auf dem iPhone noch die alte Version angezeigt wird:
+
+1. Safari öffnen
+2. `https://petrockblog.github.io/Japantrip/?v=2` aufrufen
+3. Seite einmal neu laden
+4. Danach Home-Screen-App erneut öffnen
+
+Der Service Worker nutzt jetzt Cache-Version `japan-reiseplan-2026-v2`.

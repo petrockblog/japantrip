@@ -11,14 +11,14 @@
 <link rel="apple-touch-icon" href="./icon.svg">
 <title>Japan Reiseplan 2026</title>
 <style>
-:root{--red:#b3262e;--ink:#172026;--paper:#f6f2e9;--card:#fff;--muted:#657078;--line:#eaded0}
+:root{--red:#b3262e;--ink:#172026;--paper:#f6f2e9;--card:#fff;--muted:#657078;--line:#eaded0;--soft:#f0f3f4}
 *{box-sizing:border-box}
 body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;background:var(--paper);color:var(--ink)}
-header{padding:calc(18px + env(safe-area-inset-top)) 18px 18px;background:linear-gradient(145deg,#8e1820,#c93b43);color:white;position:sticky;top:0;z-index:2;box-shadow:0 2px 12px #0002}
+header{padding:calc(18px + env(safe-area-inset-top)) 18px 18px;background:linear-gradient(145deg,#8e1820,#c93b43);color:white;position:sticky;top:0;z-index:3;box-shadow:0 2px 12px #0002}
 header h1{font-size:22px;margin:0 0 4px}
 header p{margin:0;opacity:.9;font-size:13px;line-height:1.35}
-main{max-width:760px;margin:auto;padding:14px 12px calc(30px + env(safe-area-inset-bottom))}
-.toolbar{display:flex;gap:8px;margin:4px 0 12px;position:sticky;top:76px;z-index:1}
+main{max-width:820px;margin:auto;padding:14px 12px calc(30px + env(safe-area-inset-bottom))}
+.toolbar{display:flex;gap:8px;margin:4px 0 12px;position:sticky;top:76px;z-index:2}
 .toolbar button{border:0;border-radius:12px;padding:10px 12px;background:#fff;font-weight:750;color:var(--ink);box-shadow:0 2px 10px #0000000d}
 .day{background:var(--card);border-radius:16px;margin:10px 0;overflow:hidden;box-shadow:0 2px 10px #0000000d;border:1px solid #ffffffaa}
 .today{border:2px solid var(--red);box-shadow:0 4px 18px #b3262e22}
@@ -27,15 +27,21 @@ main{max-width:760px;margin:auto;padding:14px 12px calc(30px + env(safe-area-ins
 b{font-size:16px}
 small{display:block;color:var(--muted);font-size:13px;line-height:1.35;margin-top:5px}
 .chev{font-size:20px;transition:.15s transform}
-.details{display:none;padding:0 15px 15px 81px;gap:8px;flex-wrap:wrap;border-top:1px solid var(--line);margin-top:0;padding-top:12px}
-.day.open .details{display:flex}
+.details{display:none;list-style:none;margin:0;padding:0 14px 14px 14px;border-top:1px solid var(--line)}
+.day.open .details{display:block}
 .day.open .chev{transform:rotate(180deg)}
-.link{display:inline-block;text-decoration:none;background:#f0f3f4;color:#164d67;padding:9px 11px;border-radius:10px;font-size:13px;font-weight:700}
+.slot{display:grid;grid-template-columns:92px 1fr;gap:10px;padding:12px 0;border-bottom:1px solid var(--line)}
+.slot:last-child{border-bottom:0}
+.time{font-size:12px;font-weight:850;color:var(--red);line-height:1.25;padding-top:1px}
+.slottext{font-size:14px;line-height:1.35}
+.slotlinks{display:flex;gap:7px;flex-wrap:wrap;margin-top:8px}
+.link{display:inline-block;text-decoration:none;background:var(--soft);color:#164d67;padding:8px 10px;border-radius:10px;font-size:12px;font-weight:750}
 .note{font-size:12px;color:var(--muted);line-height:1.45;margin:12px 4px 0}
+@media (max-width:420px){.slot{grid-template-columns:76px 1fr}.time{font-size:11.5px}.slottext{font-size:13.5px}}
 @media (prefers-color-scheme: dark){
-  :root{--ink:#f5f5f5;--paper:#141211;--card:#211f1d;--muted:#b5aca2;--line:#3a332e}
+  :root{--ink:#f5f5f5;--paper:#141211;--card:#211f1d;--muted:#b5aca2;--line:#3a332e;--soft:#302d29}
   .toolbar button{background:#211f1d;color:#f5f5f5}
-  .link{background:#302d29;color:#8dd2ff}
+  .link{color:#8dd2ff}
 }
 </style>
 </head>
@@ -48,116 +54,401 @@ small{display:block;color:var(--muted);font-size:13px;line-height:1.35;margin-to
   </div>
   <article class="day" data-date="2026-07-07">
   <button class="dayhead" aria-expanded="false">
-    <span class="date">07.07..</span>
-    <span><b>Ankunft</b><small>Haneda → Riverside Omori. Konbini-Einkauf, ankommen, schlafen.</small></span>
+    <span class="date">07.07.</span>
+    <span><b>Ankunft in Tokyo</b><small>Haneda → Riverside Omori. Ankommen, Konbini, schlafen.</small></span>
     <span class="chev">⌄</span>
   </button>
-  <div class="details"><a class="link" href="https://tokyo-haneda.com/en/" target="_blank" rel="noopener">Haneda Airport ↗</a></div>
+  <ol class="details"><li class="slot">
+  <div class="time">Abends</div>
+  <div class="slotbody"><div class="slottext">Ankunft am Haneda Airport. Nach Immigration und Gepäck direkt zur Unterkunft.</div><div class="slotlinks"><a class="link" href="https://tokyo-haneda.com/en/" target="_blank" rel="noopener">Haneda Airport ↗</a></div></div>
+</li><li class="slot">
+  <div class="time">Danach</div>
+  <div class="slotbody"><div class="slottext">Kurzer Konbini-Einkauf: Wasser, Frühstück, Onigiri, Obst. Kein Sightseeing.</div></div>
+</li><li class="slot">
+  <div class="time">Ziel</div>
+  <div class="slotbody"><div class="slottext">Möglichst schnell schlafen; Jetlag-Puffer für den ersten Morgen.</div></div>
+</li></ol>
 </article><article class="day" data-date="2026-07-08">
   <button class="dayhead" aria-expanded="false">
-    <span class="date">08.07..</span>
-    <span><b>Sanfter Einstieg</b><small>Ōmori/Shinagawa. Optional Shinagawa Aquarium oder Park. Frühes Abendessen.</small></span>
+    <span class="date">08.07.</span>
+    <span><b>Sanfter Einstieg</b><small>Ōmori/Shinagawa, optional Aquarium oder Park.</small></span>
     <span class="chev">⌄</span>
   </button>
-  <div class="details"><a class="link" href="https://www.aquarium.gr.jp/en/" target="_blank" rel="noopener">Shinagawa Aquarium ↗</a></div>
+  <ol class="details"><li class="slot">
+  <div class="time">08:30–09:30</div>
+  <div class="slotbody"><div class="slottext">Gemütlich frühstücken und Umgebung kennenlernen.</div></div>
+</li><li class="slot">
+  <div class="time">10:00–12:30</div>
+  <div class="slotbody"><div class="slottext">Shinagawa Aquarium oder Park/Umgebung als unkomplizierter lokaler Programmpunkt.</div><div class="slotlinks"><a class="link" href="https://www.aquarium.gr.jp/en/" target="_blank" rel="noopener">Shinagawa Aquarium ↗</a></div></div>
+</li><li class="slot">
+  <div class="time">12:30–13:30</div>
+  <div class="slotbody"><div class="slottext">Mittagessen ohne Reservierung.</div></div>
+</li><li class="slot">
+  <div class="time">14:00–16:00</div>
+  <div class="slotbody"><div class="slottext">Park, lokale Umgebung oder zurück in die Unterkunft.</div></div>
+</li><li class="slot">
+  <div class="time">17:00–18:00</div>
+  <div class="slotbody"><div class="slottext">Frühes Abendessen. Kein spontanes Zusatzprogramm.</div></div>
+</li></ol>
 </article><article class="day" data-date="2026-07-09">
   <button class="dayhead" aria-expanded="false">
-    <span class="date">09.07..</span>
-    <span><b>Wasserbus + Odaiba</b><small>Asakusa → Wasserbus nach Odaiba. Miraikan, Unicorn Gundam, Waterfront.</small></span>
+    <span class="date">09.07.</span>
+    <span><b>Wasserbus + Odaiba</b><small>Asakusa → Wasserbus nach Odaiba, Miraikan, Gundam.</small></span>
     <span class="chev">⌄</span>
   </button>
-  <div class="details"><a class="link" href="https://www.suijobus.co.jp/en/" target="_blank" rel="noopener">TOKYO CRUISE ↗</a><a class="link" href="https://www.miraikan.jst.go.jp/en/" target="_blank" rel="noopener">Miraikan ↗</a><a class="link" href="https://www.unicorn-gundam-statue.jp/" target="_blank" rel="noopener">Unicorn Gundam ↗</a></div>
+  <ol class="details"><li class="slot">
+  <div class="time">ca. 08:00</div>
+  <div class="slotbody"><div class="slottext">Abfahrt ab Riverside Omori.</div></div>
+</li><li class="slot">
+  <div class="time">ca. 09:15</div>
+  <div class="slotbody"><div class="slottext">Ankunft Asakusa. Nur kurzer Blick ans Sumida-Ufer, dann zum Pier.</div></div>
+</li><li class="slot">
+  <div class="time">Vormittag</div>
+  <div class="slotbody"><div class="slottext">Wasserbus Asakusa → Odaiba Seaside Park. Verbindung kurz vorher prüfen.</div><div class="slotlinks"><a class="link" href="https://www.suijobus.co.jp/en/" target="_blank" rel="noopener">TOKYO CRUISE ↗</a></div></div>
+</li><li class="slot">
+  <div class="time">12:00–13:00</div>
+  <div class="slotbody"><div class="slottext">Mittagessen in Odaiba.</div></div>
+</li><li class="slot">
+  <div class="time">13:00–15:30</div>
+  <div class="slotbody"><div class="slottext">Miraikan: 2–2,5 Stunden, gezielt interessante Bereiche.</div><div class="slotlinks"><a class="link" href="https://www.miraikan.jst.go.jp/en/" target="_blank" rel="noopener">Miraikan ↗</a></div></div>
+</li><li class="slot">
+  <div class="time">16:00–16:30</div>
+  <div class="slotbody"><div class="slottext">Unicorn Gundam.</div><div class="slotlinks"><a class="link" href="https://www.unicorn-gundam-statue.jp/" target="_blank" rel="noopener">Unicorn Gundam ↗</a></div></div>
+</li><li class="slot">
+  <div class="time">16:30–18:00</div>
+  <div class="slotbody"><div class="slottext">Waterfront, Eis, Aussicht; danach Rückfahrt.</div></div>
+</li></ol>
 </article><article class="day" data-date="2026-07-10">
   <button class="dayhead" aria-expanded="false">
-    <span class="date">10.07..</span>
-    <span><b>Meiji + Shibuya</b><small>Meiji Shrine, Harajuku kurz, Shibuya PARCO gezielt: Nintendo und Pokémon.</small></span>
+    <span class="date">10.07.</span>
+    <span><b>Meiji, Harajuku + Shibuya</b><small>Meiji Shrine, Harajuku kurz, Shibuya PARCO gezielt.</small></span>
     <span class="chev">⌄</span>
   </button>
-  <div class="details"><a class="link" href="https://www.meijijingu.or.jp/en/" target="_blank" rel="noopener">Meiji Jingu ↗</a><a class="link" href="https://shibuya.parco.jp/" target="_blank" rel="noopener">Shibuya PARCO ↗</a><a class="link" href="https://www.nintendo.com/jp/officialstore/" target="_blank" rel="noopener">Nintendo TOKYO ↗</a><a class="link" href="https://shop.pokemon.co.jp/en/shop/pokemoncenter-shibuya/" target="_blank" rel="noopener">Pokémon Center Shibuya ↗</a></div>
+  <ol class="details"><li class="slot">
+  <div class="time">08:30</div>
+  <div class="slotbody"><div class="slottext">Abfahrt.</div></div>
+</li><li class="slot">
+  <div class="time">09:30–11:00</div>
+  <div class="slotbody"><div class="slottext">Meiji Shrine und Waldwege.</div><div class="slotlinks"><a class="link" href="https://www.meijijingu.or.jp/en/" target="_blank" rel="noopener">Meiji Jingu ↗</a></div></div>
+</li><li class="slot">
+  <div class="time">11:15–12:00</div>
+  <div class="slotbody"><div class="slottext">Harajuku / Takeshita Street nur kurz.</div></div>
+</li><li class="slot">
+  <div class="time">13:00–15:00</div>
+  <div class="slotbody"><div class="slottext">Shibuya PARCO als Shopping-Mission: Nintendo, Pokémon und höchstens ein weiterer Wunschshop.</div><div class="slotlinks"><a class="link" href="https://shibuya.parco.jp/" target="_blank" rel="noopener">Shibuya PARCO ↗</a><a class="link" href="https://www.nintendo.com/jp/officialstore/" target="_blank" rel="noopener">Nintendo TOKYO ↗</a><a class="link" href="https://shop.pokemon.co.jp/en/shop/pokemoncenter-shibuya/" target="_blank" rel="noopener">Pokémon Center Shibuya ↗</a></div></div>
+</li><li class="slot">
+  <div class="time">15:15–16:00</div>
+  <div class="slotbody"><div class="slottext">Shibuya Crossing.</div></div>
+</li><li class="slot">
+  <div class="time">16:00–17:00</div>
+  <div class="slotbody"><div class="slottext">Hachikō und Umgebung; danach Rückfahrt.</div></div>
+</li></ol>
 </article><article class="day" data-date="2026-07-11">
   <button class="dayhead" aria-expanded="false">
-    <span class="date">11.07..</span>
-    <span><b>Kamakura + Enoshima</b><small>Großer Buddha, Hase-dera, Enoden, Enoshima, Meer und Aussicht.</small></span>
+    <span class="date">11.07.</span>
+    <span><b>Kamakura + Enoshima</b><small>Großer Buddha, Hase-dera, Enoden, Enoshima.</small></span>
     <span class="chev">⌄</span>
   </button>
-  <div class="details"><a class="link" href="https://www.kotoku-in.jp/en/" target="_blank" rel="noopener">Kōtoku-in ↗</a><a class="link" href="https://www.hasedera.jp/en/" target="_blank" rel="noopener">Hase-dera ↗</a><a class="link" href="https://www.enoden.co.jp/en/" target="_blank" rel="noopener">Enoden ↗</a></div>
+  <ol class="details"><li class="slot">
+  <div class="time">06:45</div>
+  <div class="slotbody"><div class="slottext">Frühstück.</div></div>
+</li><li class="slot">
+  <div class="time">07:15</div>
+  <div class="slotbody"><div class="slottext">Abfahrt.</div></div>
+</li><li class="slot">
+  <div class="time">09:00–09:45</div>
+  <div class="slotbody"><div class="slottext">Großer Buddha von Kamakura.</div><div class="slotlinks"><a class="link" href="https://www.kotoku-in.jp/en/" target="_blank" rel="noopener">Kōtoku-in ↗</a></div></div>
+</li><li class="slot">
+  <div class="time">10:00–11:15</div>
+  <div class="slotbody"><div class="slottext">Hase-dera; keine zusätzlichen Tempel erzwingen.</div><div class="slotlinks"><a class="link" href="https://www.hasedera.jp/en/" target="_blank" rel="noopener">Hase-dera ↗</a></div></div>
+</li><li class="slot">
+  <div class="time">11:30–12:30</div>
+  <div class="slotbody"><div class="slottext">Mittagessen.</div></div>
+</li><li class="slot">
+  <div class="time">Nachmittag</div>
+  <div class="slotbody"><div class="slottext">Mit der Enoden Richtung Enoshima.</div><div class="slotlinks"><a class="link" href="https://www.enoden.co.jp/en/" target="_blank" rel="noopener">Enoden ↗</a></div></div>
+</li><li class="slot">
+  <div class="time">13:30–16:30</div>
+  <div class="slotbody"><div class="slottext">Enoshima: Meer, Snacks, Aussicht und Inselgefühl.</div><div class="slotlinks"><a class="link" href="https://odakyu-global.com/passes/enoshima-kamakura-freepass/" target="_blank" rel="noopener">Enoshima-Kamakura Pass ↗</a></div></div>
+</li><li class="slot">
+  <div class="time">16:30–17:00</div>
+  <div class="slotbody"><div class="slottext">Rückreise beginnen; ca. 19:00 Unterkunft.</div></div>
+</li></ol>
 </article><article class="day" data-date="2026-07-12">
   <button class="dayhead" aria-expanded="false">
-    <span class="date">12.07..</span>
-    <span><b>Ueno</b><small>National Museum of Nature and Science, Ueno Park, Ameyoko.</small></span>
+    <span class="date">12.07.</span>
+    <span><b>Ueno</b><small>Naturkundemuseum, Ueno Park, Ameyoko.</small></span>
     <span class="chev">⌄</span>
   </button>
-  <div class="details"><a class="link" href="https://www.kahaku.go.jp/english/" target="_blank" rel="noopener">National Museum of Nature and Science ↗</a></div>
+  <ol class="details"><li class="slot">
+  <div class="time">08:00</div>
+  <div class="slotbody"><div class="slottext">Abfahrt.</div></div>
+</li><li class="slot">
+  <div class="time">09:00–12:00</div>
+  <div class="slotbody"><div class="slottext">National Museum of Nature and Science: Dinosaurier, Tiere, Naturgeschichte, Technik.</div><div class="slotlinks"><a class="link" href="https://www.kahaku.go.jp/english/" target="_blank" rel="noopener">National Museum of Nature and Science ↗</a></div></div>
+</li><li class="slot">
+  <div class="time">12:15–13:15</div>
+  <div class="slotbody"><div class="slottext">Mittagessen.</div></div>
+</li><li class="slot">
+  <div class="time">13:30–14:30</div>
+  <div class="slotbody"><div class="slottext">Ueno Park.</div><div class="slotlinks"><a class="link" href="https://www.kensetsu.metro.tokyo.lg.jp/jimusho/toubuk/ueno/en_index.html" target="_blank" rel="noopener">Ueno Park ↗</a></div></div>
+</li><li class="slot">
+  <div class="time">14:45–16:00</div>
+  <div class="slotbody"><div class="slottext">Ameyoko als Atmosphäre und Snack-Stopp, nicht als Einkaufsauftrag.</div></div>
+</li><li class="slot">
+  <div class="time">16:00–17:00</div>
+  <div class="slotbody"><div class="slottext">Rückfahrt.</div></div>
+</li></ol>
 </article><article class="day" data-date="2026-07-13">
   <button class="dayhead" aria-expanded="false">
-    <span class="date">13.07..</span>
-    <span><b>Asakusa FIX</b><small>Sensō-ji früh. Capybara Café 11:00–12:30. Danach Samurai Ninja Museum.</small></span>
+    <span class="date">13.07.</span>
+    <span><b>Asakusa FIX</b><small>Sensō-ji, Capybara Café 11:00–12:30, Samurai Ninja Museum.</small></span>
     <span class="chev">⌄</span>
   </button>
-  <div class="details"><a class="link" href="https://www.senso-ji.jp/english/" target="_blank" rel="noopener">Sensō-ji ↗</a><a class="link" href="https://samuraininjamuseum.com/" target="_blank" rel="noopener">Samurai Ninja Museum ↗</a></div>
+  <ol class="details"><li class="slot">
+  <div class="time">07:30</div>
+  <div class="slotbody"><div class="slottext">Abfahrt.</div></div>
+</li><li class="slot">
+  <div class="time">08:30–10:00</div>
+  <div class="slotbody"><div class="slottext">Kaminarimon → Nakamise → Hōzōmon → Sensō-ji → kurze Seitenstraßen.</div><div class="slotlinks"><a class="link" href="https://www.senso-ji.jp/english/" target="_blank" rel="noopener">Sensō-ji ↗</a></div></div>
+</li><li class="slot">
+  <div class="time">10:00–10:40</div>
+  <div class="slotbody"><div class="slottext">Langsam zum Café, Toilette und Getränkepuffer.</div></div>
+</li><li class="slot">
+  <div class="time">11:00–12:30</div>
+  <div class="slotbody"><div class="slottext">Capybara Café – feste Reservierung.</div></div>
+</li><li class="slot">
+  <div class="time">12:30–13:30</div>
+  <div class="slotbody"><div class="slottext">Unkompliziertes Mittagessen.</div></div>
+</li><li class="slot">
+  <div class="time">14:00–15:15</div>
+  <div class="slotbody"><div class="slottext">Samurai Ninja Museum Tokyo; Basisticket mit Führung und Mitmachanteilen.</div><div class="slotlinks"><a class="link" href="https://samuraininjamuseum.com/" target="_blank" rel="noopener">Samurai Ninja Museum ↗</a></div></div>
+</li><li class="slot">
+  <div class="time">ab 15:30</div>
+  <div class="slotbody"><div class="slottext">Je nach Energie: Rückfahrt oder 30–45 Minuten Sumida-Ufer. Kein Skytree-Zwang.</div></div>
+</li></ol>
 </article><article class="day" data-date="2026-07-14">
   <button class="dayhead" aria-expanded="false">
-    <span class="date">14.07..</span>
-    <span><b>Shinkansen + Hakone</b><small>Shinagawa → Odawara im Tōkaidō-Shinkansen. Danach Golden Route: Gōra, Sōunzan, Ōwakudani, Tōgendai, Ashi-See.</small></span>
+    <span class="date">14.07.</span>
+    <span><b>Shinkansen + Hakone Golden Route</b><small>Shinagawa → Odawara im Shinkansen, danach Hakone-Rundroute.</small></span>
     <span class="chev">⌄</span>
   </button>
-  <div class="details"><a class="link" href="https://global.jr-central.co.jp/en/info/timetable/" target="_blank" rel="noopener">JR Central Fahrplan ↗</a><a class="link" href="https://global.jr-central.co.jp/en/onlinebooking/" target="_blank" rel="noopener">Tōkaidō-Shinkansen ↗</a><a class="link" href="https://www.hakonenavi.jp/international/en/" target="_blank" rel="noopener">Hakone Navi ↗</a><a class="link" href="https://www.hakonenavi.jp/international/en/discount_passes/free_pass" target="_blank" rel="noopener">Hakone Freepass ↗</a><a class="link" href="https://odakyu-global.com/transport-guide/hakone-area-status/" target="_blank" rel="noopener">Hakone Verkehrsstatus ↗</a></div>
+  <ol class="details"><li class="slot">
+  <div class="time">ca. 06:20</div>
+  <div class="slotbody"><div class="slottext">Riverside Omori verlassen.</div></div>
+</li><li class="slot">
+  <div class="time">ca. 06:50</div>
+  <div class="slotbody"><div class="slottext">Shinagawa Station; Orientierung und Bahnsteigpuffer.</div></div>
+</li><li class="slot">
+  <div class="time">ca. 07:00–07:30</div>
+  <div class="slotbody"><div class="slottext">Tōkaidō-Shinkansen Shinagawa → Odawara. Nur einen Zug wählen, der in Odawara hält.</div><div class="slotlinks"><a class="link" href="https://global.jr-central.co.jp/en/info/timetable/" target="_blank" rel="noopener">JR Central Fahrplan ↗</a><a class="link" href="https://global.jr-central.co.jp/en/onlinebooking/" target="_blank" rel="noopener">Tōkaidō-Shinkansen Buchung ↗</a></div></div>
+</li><li class="slot">
+  <div class="time">ca. 07:30–07:50</div>
+  <div class="slotbody"><div class="slottext">Ankunft Odawara und Umstieg.</div></div>
+</li><li class="slot">
+  <div class="time">ca. 08:00–08:20</div>
+  <div class="slotbody"><div class="slottext">Weiterfahrt Odawara → Hakone-Yumoto.</div><div class="slotlinks"><a class="link" href="https://www.hakonenavi.jp/international/en/" target="_blank" rel="noopener">Hakone Navi ↗</a></div></div>
+</li><li class="slot">
+  <div class="time">ab ca. 08:30</div>
+  <div class="slotbody"><div class="slottext">Beginn der Hakone Golden Route.</div></div>
+</li><li class="slot">
+  <div class="time">ca. 08:30–09:20</div>
+  <div class="slotbody"><div class="slottext">Hakone Tozan Railway nach Gōra.</div><div class="slotlinks"><a class="link" href="https://www.hakonenavi.jp/international/en/" target="_blank" rel="noopener">Hakone Navi ↗</a></div></div>
+</li><li class="slot">
+  <div class="time">ca. 09:30–09:50</div>
+  <div class="slotbody"><div class="slottext">Cable Car nach Sōunzan.</div></div>
+</li><li class="slot">
+  <div class="time">ca. 10:00–10:30</div>
+  <div class="slotbody"><div class="slottext">Ropeway Richtung Ōwakudani.</div><div class="slotlinks"><a class="link" href="https://odakyu-global.com/transport-guide/hakone-area-status/" target="_blank" rel="noopener">Hakone Verkehrsstatus ↗</a></div></div>
+</li><li class="slot">
+  <div class="time">10:30–11:30</div>
+  <div class="slotbody"><div class="slottext">Ōwakudani: Vulkanlandschaft, schwarze Eier, Fuji bei guter Sicht.</div></div>
+</li><li class="slot">
+  <div class="time">11:30–12:10</div>
+  <div class="slotbody"><div class="slottext">Ropeway nach Tōgendai.</div></div>
+</li><li class="slot">
+  <div class="time">12:10–13:00</div>
+  <div class="slotbody"><div class="slottext">Schnelles Mittagessen.</div></div>
+</li><li class="slot">
+  <div class="time">ca. 13:00–14:00</div>
+  <div class="slotbody"><div class="slottext">Hakone Sightseeing Cruise / Piratenschiff über den Ashi-See.</div><div class="slotlinks"><a class="link" href="https://www.hakonenavi.jp/international/en/discount_passes/free_pass" target="_blank" rel="noopener">Hakone Freepass ↗</a></div></div>
+</li><li class="slot">
+  <div class="time">14:00–15:15</div>
+  <div class="slotbody"><div class="slottext">Seeufer; optional kurzer Hakone-Schrein-Bereich nur bei guter Energie.</div></div>
+</li><li class="slot">
+  <div class="time">spätestens 15:30–16:00</div>
+  <div class="slotbody"><div class="slottext">Rückreise beginnen.</div></div>
+</li><li class="slot">
+  <div class="time">Wetterregel</div>
+  <div class="slotbody"><div class="slottext">Bei Dauerregen, tiefen Wolken oder Ropeway-Störungen verschieben; 18.07. oder 20.07. als Puffer nutzen.</div><div class="slotlinks"><a class="link" href="https://odakyu-global.com/transport-guide/hakone-area-status/" target="_blank" rel="noopener">Hakone Verkehrsstatus ↗</a></div></div>
+</li></ol>
 </article><article class="day" data-date="2026-07-15">
   <button class="dayhead" aria-expanded="false">
-    <span class="date">15.07..</span>
-    <span><b>teamLab Borderless</b><small>Früher Slot. Ca. 3 Stunden teamLab Borderless, danach Azabudai Hills.</small></span>
+    <span class="date">15.07.</span>
+    <span><b>teamLab Borderless + Azabudai Hills</b><small>Früher Slot, ca. 3 Stunden Borderless, danach Azabudai Hills.</small></span>
     <span class="chev">⌄</span>
   </button>
-  <div class="details"><a class="link" href="https://www.teamlab.art/e/tokyo/" target="_blank" rel="noopener">teamLab Borderless ↗</a><a class="link" href="https://www.azabudai-hills.com/en/" target="_blank" rel="noopener">Azabudai Hills ↗</a></div>
+  <ol class="details"><li class="slot">
+  <div class="time">Empfehlung</div>
+  <div class="slotbody"><div class="slottext">Frühes Zeitfenster buchen, idealerweise gegen 08:30 oder 09:00.</div><div class="slotlinks"><a class="link" href="https://www.teamlab.art/e/tokyo/" target="_blank" rel="noopener">teamLab Borderless ↗</a></div></div>
+</li><li class="slot">
+  <div class="time">ca. 07:30–08:00</div>
+  <div class="slotbody"><div class="slottext">Abfahrt ab Riverside Omori; ausreichend Ankunftspuffer einplanen.</div></div>
+</li><li class="slot">
+  <div class="time">ca. 08:30/09:00–12:00</div>
+  <div class="slotbody"><div class="slottext">teamLab Borderless: frei erkunden; etwa 3 Stunden reservieren.</div><div class="slotlinks"><a class="link" href="https://www.teamlab.art/e/tokyo/" target="_blank" rel="noopener">teamLab Borderless ↗</a></div></div>
+</li><li class="slot">
+  <div class="time">12:00–13:00</div>
+  <div class="slotbody"><div class="slottext">Mittagessen in oder nahe Azabudai Hills.</div><div class="slotlinks"><a class="link" href="https://www.azabudai-hills.com/en/" target="_blank" rel="noopener">Azabudai Hills ↗</a></div></div>
+</li><li class="slot">
+  <div class="time">13:00–15:00</div>
+  <div class="slotbody"><div class="slottext">Azabudai Hills entspannt erkunden; Aussicht, Architektur, Cafépause.</div><div class="slotlinks"><a class="link" href="https://www.azabudai-hills.com/en/" target="_blank" rel="noopener">Azabudai Hills ↗</a></div></div>
+</li><li class="slot">
+  <div class="time">ca. 15:00–16:00</div>
+  <div class="slotbody"><div class="slottext">Rückreise oder früher Abbruch bei Müdigkeit.</div></div>
+</li></ol>
 </article><article class="day" data-date="2026-07-16">
   <button class="dayhead" aria-expanded="false">
-    <span class="date">16.07..</span>
-    <span><b>Ruhetag</b><small>Ausschlafen, Wäsche, lokales Essen, höchstens eine kleine Aktivität.</small></span>
+    <span class="date">16.07.</span>
+    <span><b>Echter Ruhetag</b><small>Ausschlafen, Wäsche, lokales Essen, höchstens eine kleine Aktivität.</small></span>
     <span class="chev">⌄</span>
   </button>
-  <div class="details"><a class="link" href="https://www.aquarium.gr.jp/en/" target="_blank" rel="noopener">Shinagawa Aquarium ↗</a></div>
+  <ol class="details"><li class="slot">
+  <div class="time">Vormittag</div>
+  <div class="slotbody"><div class="slottext">Ausschlafen, Wäsche, Frühstück, langsam starten.</div></div>
+</li><li class="slot">
+  <div class="time">Mittag</div>
+  <div class="slotbody"><div class="slottext">Lokales Essen rund um Ōmori / Heiwajima.</div></div>
+</li><li class="slot">
+  <div class="time">Nachmittag</div>
+  <div class="slotbody"><div class="slottext">Genau eine Option: Park, Aquarium, lokales Erlebnis oder Unterkunft.</div><div class="slotlinks"><a class="link" href="https://www.aquarium.gr.jp/en/" target="_blank" rel="noopener">Shinagawa Aquarium ↗</a></div></div>
+</li><li class="slot">
+  <div class="time">Abend</div>
+  <div class="slotbody"><div class="slottext">Früh schlafen; kein versteckter Sightseeing-Marathon.</div></div>
+</li></ol>
 </article><article class="day" data-date="2026-07-17">
   <button class="dayhead" aria-expanded="false">
-    <span class="date">17.07..</span>
+    <span class="date">17.07.</span>
     <span><b>Yokohama</b><small>Minato Mirai, Cup Noodles Museum, Hafen, Chinatown.</small></span>
     <span class="chev">⌄</span>
   </button>
-  <div class="details"><a class="link" href="https://www.cupnoodles-museum.jp/en/yokohama/" target="_blank" rel="noopener">Cup Noodles Museum ↗</a><a class="link" href="https://www.cupnoodles-museum.jp/en/yokohama/attractions/mc-factory/" target="_blank" rel="noopener">MY CUPNOODLES Factory ↗</a><a class="link" href="https://www.yokohamajapan.com/" target="_blank" rel="noopener">Yokohama Visitors Guide ↗</a></div>
+  <ol class="details"><li class="slot">
+  <div class="time">08:00</div>
+  <div class="slotbody"><div class="slottext">Abfahrt.</div></div>
+</li><li class="slot">
+  <div class="time">ca. 09:15</div>
+  <div class="slotbody"><div class="slottext">Minato Mirai.</div><div class="slotlinks"><a class="link" href="https://www.yokohamajapan.com/" target="_blank" rel="noopener">Yokohama Visitors Guide ↗</a></div></div>
+</li><li class="slot">
+  <div class="time">10:00–12:30</div>
+  <div class="slotbody"><div class="slottext">Cup Noodles Museum; MY CUPNOODLES möglichst vorab planen.</div><div class="slotlinks"><a class="link" href="https://www.cupnoodles-museum.jp/en/yokohama/" target="_blank" rel="noopener">Cup Noodles Museum ↗</a><a class="link" href="https://www.cupnoodles-museum.jp/en/yokohama/attractions/mc-factory/" target="_blank" rel="noopener">MY CUPNOODLES Factory ↗</a></div></div>
+</li><li class="slot">
+  <div class="time">12:30–13:30</div>
+  <div class="slotbody"><div class="slottext">Mittagessen.</div></div>
+</li><li class="slot">
+  <div class="time">13:30–15:30</div>
+  <div class="slotbody"><div class="slottext">Hafen / Minato Mirai.</div><div class="slotlinks"><a class="link" href="https://www.yokohamajapan.com/" target="_blank" rel="noopener">Yokohama Visitors Guide ↗</a></div></div>
+</li><li class="slot">
+  <div class="time">16:00–18:00</div>
+  <div class="slotbody"><div class="slottext">Yokohama Chinatown; vorher Restaurant festlegen oder Streetfood-orientiert bleiben.</div></div>
+</li><li class="slot">
+  <div class="time">18:00</div>
+  <div class="slotbody"><div class="slottext">Rückfahrt.</div></div>
+</li></ol>
 </article><article class="day" data-date="2026-07-18">
   <button class="dayhead" aria-expanded="false">
-    <span class="date">18.07..</span>
-    <span><b>Puffertag</b><small>Bevorzugt Wetter-/Hakone-Puffer oder Erholung. Optional Kawagoe.</small></span>
+    <span class="date">18.07.</span>
+    <span><b>Puffertag</b><small>Wetter-/Hakone-Puffer oder Erholung. Optional Kawagoe.</small></span>
     <span class="chev">⌄</span>
   </button>
-  <div class="details"><a class="link" href="https://koedo.or.jp/en/" target="_blank" rel="noopener">Kawagoe Tourism ↗</a></div>
+  <ol class="details"><li class="slot">
+  <div class="time">Variante A</div>
+  <div class="slotbody"><div class="slottext">Puffer für Hakone bei schlechtem Wetter, verregnete Tage, Ausschlafen oder lokalen Familientag.</div></div>
+</li><li class="slot">
+  <div class="time">Variante B</div>
+  <div class="slotbody"><div class="slottext">Kawagoe nur bei echter Ausflugslust: historische Lagerhausstraße, Glockenturm, Candy Alley.</div><div class="slotlinks"><a class="link" href="https://koedo.or.jp/en/" target="_blank" rel="noopener">Kawagoe Tourism ↗</a></div></div>
+</li><li class="slot">
+  <div class="time">Entscheidung</div>
+  <div class="slotbody"><div class="slottext">Am Abend des 17.07. anhand Energie und Wetter.</div></div>
+</li></ol>
 </article><article class="day" data-date="2026-07-19">
   <button class="dayhead" aria-expanded="false">
-    <span class="date">19.07..</span>
-    <span><b>Akihabara gezielt</b><small>Aktuelle Games, optional Retro-Gaming, Gachapon/Arcade. Nur vorab gewählte Ziele.</small></span>
+    <span class="date">19.07.</span>
+    <span><b>Akihabara gezielt</b><small>Games, optional Retro, Gachapon/Arcade mit Budget.</small></span>
     <span class="chev">⌄</span>
   </button>
-  <div class="details"><a class="link" href="https://visit-chiyoda.tokyo/app/en/area/akihabara/" target="_blank" rel="noopener">Akihabara Guide ↗</a></div>
+  <ol class="details"><li class="slot">
+  <div class="time">10:00–11:00</div>
+  <div class="slotbody"><div class="slottext">Mission 1: aktuelle Games – ein vorher gewählter großer Laden.</div><div class="slotlinks"><a class="link" href="https://visit-chiyoda.tokyo/app/en/area/akihabara/" target="_blank" rel="noopener">Akihabara Guide ↗</a></div></div>
+</li><li class="slot">
+  <div class="time">11:15–12:15</div>
+  <div class="slotbody"><div class="slottext">Mission 2: Retro-Gaming – nur bei echtem Interesse.</div></div>
+</li><li class="slot">
+  <div class="time">12:15–13:15</div>
+  <div class="slotbody"><div class="slottext">Mittagessen.</div></div>
+</li><li class="slot">
+  <div class="time">13:30–14:30</div>
+  <div class="slotbody"><div class="slottext">Mission 3: Gachapon / Arcade; für Kinder vorher festes Budget setzen.</div></div>
+</li><li class="slot">
+  <div class="time">15:00</div>
+  <div class="slotbody"><div class="slottext">Ende. Keine ziellose Suche durch ähnliche Läden.</div></div>
+</li></ol>
 </article><article class="day" data-date="2026-07-20">
   <button class="dayhead" aria-expanded="false">
-    <span class="date">20.07..</span>
+    <span class="date">20.07.</span>
     <span><b>Marine Day</b><small>Flexibel: Tokyo Bay, Park, Lieblingsviertel oder Hakone-Ersatztag.</small></span>
     <span class="chev">⌄</span>
   </button>
-  <div class="details"><a class="link" href="https://www.gotokyo.org/en/" target="_blank" rel="noopener">Tokyo Official Travel Guide ↗</a></div>
+  <ol class="details"><li class="slot">
+  <div class="time">Start</div>
+  <div class="slotbody"><div class="slottext">Später Start gegen 10:00.</div></div>
+</li><li class="slot">
+  <div class="time">Je nach Wetter</div>
+  <div class="slotbody"><div class="slottext">Tokyo Bay, Park, Lieblingsviertel wiederholen, Indoor-Aktivität oder kleiner Shopping-Nachholbedarf.</div><div class="slotlinks"><a class="link" href="https://www.gotokyo.org/en/" target="_blank" rel="noopener">Tokyo Official Travel Guide ↗</a></div></div>
+</li><li class="slot">
+  <div class="time">Pufferfunktion</div>
+  <div class="slotbody"><div class="slottext">Zweiter möglicher Hakone-Ersatztag, falls nötig.</div></div>
+</li><li class="slot">
+  <div class="time">Nicht geplant</div>
+  <div class="slotbody"><div class="slottext">Keine kritische Hauptattraktion mit spontaner Ticketabhängigkeit.</div></div>
+</li></ol>
 </article><article class="day" data-date="2026-07-21">
   <button class="dayhead" aria-expanded="false">
-    <span class="date">21.07..</span>
-    <span><b>Tokyo Station + Abschluss</b><small>Character Street, gezielte Souvenirs, früh zurück und packen.</small></span>
+    <span class="date">21.07.</span>
+    <span><b>Tokyo Station + Abschluss</b><small>Character Street, Souvenirs, packen.</small></span>
     <span class="chev">⌄</span>
   </button>
-  <div class="details"><a class="link" href="https://www.tokyoeki-1bangai.co.jp/en/" target="_blank" rel="noopener">Tokyo Character Street ↗</a></div>
+  <ol class="details"><li class="slot">
+  <div class="time">09:00</div>
+  <div class="slotbody"><div class="slottext">Langsam starten.</div></div>
+</li><li class="slot">
+  <div class="time">10:00–12:00</div>
+  <div class="slotbody"><div class="slottext">Tokyo Station Character Street; Wunschkategorien vorher festlegen, maximal 2 Stunden.</div><div class="slotlinks"><a class="link" href="https://www.tokyoeki-1bangai.co.jp/en/" target="_blank" rel="noopener">Tokyo Character Street ↗</a></div></div>
+</li><li class="slot">
+  <div class="time">12:00–13:00</div>
+  <div class="slotbody"><div class="slottext">Mittagessen.</div></div>
+</li><li class="slot">
+  <div class="time">13:00–14:00</div>
+  <div class="slotbody"><div class="slottext">Letzter konkreter Einkauf.</div></div>
+</li><li class="slot">
+  <div class="time">spätestens 15:00</div>
+  <div class="slotbody"><div class="slottext">Zurück zur Unterkunft; Koffer packen, Handgepäck, Souvenirs verteilen.</div></div>
+</li><li class="slot">
+  <div class="time">Abend</div>
+  <div class="slotbody"><div class="slottext">Früh essen; keine große letzte Abendtour.</div></div>
+</li></ol>
 </article><article class="day" data-date="2026-07-22">
   <button class="dayhead" aria-expanded="false">
-    <span class="date">22.07..</span>
+    <span class="date">22.07.</span>
     <span><b>Abflug</b><small>Riverside Omori → Haneda. Keine weiteren Programmpunkte.</small></span>
     <span class="chev">⌄</span>
   </button>
-  <div class="details"><a class="link" href="https://tokyo-haneda.com/en/" target="_blank" rel="noopener">Haneda Airport ↗</a></div>
+  <ol class="details"><li class="slot">
+  <div class="time">Morgens</div>
+  <div class="slotbody"><div class="slottext">Aufstehen, letzter Check, Riverside Omori verlassen.</div></div>
+</li><li class="slot">
+  <div class="time">Danach</div>
+  <div class="slotbody"><div class="slottext">Direkt zum Haneda Airport; kein weiteres Programm.</div><div class="slotlinks"><a class="link" href="https://tokyo-haneda.com/en/" target="_blank" rel="noopener">Haneda Airport ↗</a></div></div>
+</li></ol>
 </article>
   <p class="note">Tipp: In Safari öffnen, Teilen-Symbol antippen und „Zum Home-Bildschirm“ wählen.</p>
 </main>
