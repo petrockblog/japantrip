@@ -1,0 +1,191 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#b3262e">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Japan Plan">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<link rel="manifest" href="./manifest.webmanifest">
+<link rel="apple-touch-icon" href="./icon.svg">
+<title>Japan Reiseplan 2026</title>
+<style>
+:root{--red:#b3262e;--ink:#172026;--paper:#f6f2e9;--card:#fff;--muted:#657078;--line:#eaded0}
+*{box-sizing:border-box}
+body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;background:var(--paper);color:var(--ink)}
+header{padding:calc(18px + env(safe-area-inset-top)) 18px 18px;background:linear-gradient(145deg,#8e1820,#c93b43);color:white;position:sticky;top:0;z-index:2;box-shadow:0 2px 12px #0002}
+header h1{font-size:22px;margin:0 0 4px}
+header p{margin:0;opacity:.9;font-size:13px;line-height:1.35}
+main{max-width:760px;margin:auto;padding:14px 12px calc(30px + env(safe-area-inset-bottom))}
+.toolbar{display:flex;gap:8px;margin:4px 0 12px;position:sticky;top:76px;z-index:1}
+.toolbar button{border:0;border-radius:12px;padding:10px 12px;background:#fff;font-weight:750;color:var(--ink);box-shadow:0 2px 10px #0000000d}
+.day{background:var(--card);border-radius:16px;margin:10px 0;overflow:hidden;box-shadow:0 2px 10px #0000000d;border:1px solid #ffffffaa}
+.today{border:2px solid var(--red);box-shadow:0 4px 18px #b3262e22}
+.dayhead{width:100%;border:0;background:none;text-align:left;padding:15px;display:grid;grid-template-columns:58px 1fr 20px;gap:8px;color:inherit;align-items:start}
+.date{font-weight:850;color:var(--red)}
+b{font-size:16px}
+small{display:block;color:var(--muted);font-size:13px;line-height:1.35;margin-top:5px}
+.chev{font-size:20px;transition:.15s transform}
+.details{display:none;padding:0 15px 15px 81px;gap:8px;flex-wrap:wrap;border-top:1px solid var(--line);margin-top:0;padding-top:12px}
+.day.open .details{display:flex}
+.day.open .chev{transform:rotate(180deg)}
+.link{display:inline-block;text-decoration:none;background:#f0f3f4;color:#164d67;padding:9px 11px;border-radius:10px;font-size:13px;font-weight:700}
+.note{font-size:12px;color:var(--muted);line-height:1.45;margin:12px 4px 0}
+@media (prefers-color-scheme: dark){
+  :root{--ink:#f5f5f5;--paper:#141211;--card:#211f1d;--muted:#b5aca2;--line:#3a332e}
+  .toolbar button{background:#211f1d;color:#f5f5f5}
+  .link{background:#302d29;color:#8dd2ff}
+}
+</style>
+</head>
+<body>
+<header><h1>🇯🇵 Japan Reiseplan</h1><p>Tokyo · 7.–22. Juli 2026 · Riverside Omori</p></header>
+<main>
+  <div class="toolbar">
+    <button id="todayBtn">Heute anzeigen</button>
+    <button id="allBtn">Alle öffnen</button>
+  </div>
+  <article class="day" data-date="2026-07-07">
+  <button class="dayhead" aria-expanded="false">
+    <span class="date">07.07..</span>
+    <span><b>Ankunft</b><small>Haneda → Riverside Omori. Konbini-Einkauf, ankommen, schlafen.</small></span>
+    <span class="chev">⌄</span>
+  </button>
+  <div class="details"><a class="link" href="https://tokyo-haneda.com/en/" target="_blank" rel="noopener">Haneda Airport ↗</a></div>
+</article><article class="day" data-date="2026-07-08">
+  <button class="dayhead" aria-expanded="false">
+    <span class="date">08.07..</span>
+    <span><b>Sanfter Einstieg</b><small>Ōmori/Shinagawa. Optional Shinagawa Aquarium oder Park. Frühes Abendessen.</small></span>
+    <span class="chev">⌄</span>
+  </button>
+  <div class="details"><a class="link" href="https://www.aquarium.gr.jp/en/" target="_blank" rel="noopener">Shinagawa Aquarium ↗</a></div>
+</article><article class="day" data-date="2026-07-09">
+  <button class="dayhead" aria-expanded="false">
+    <span class="date">09.07..</span>
+    <span><b>Wasserbus + Odaiba</b><small>Asakusa → Wasserbus nach Odaiba. Miraikan, Unicorn Gundam, Waterfront.</small></span>
+    <span class="chev">⌄</span>
+  </button>
+  <div class="details"><a class="link" href="https://www.suijobus.co.jp/en/" target="_blank" rel="noopener">TOKYO CRUISE ↗</a><a class="link" href="https://www.miraikan.jst.go.jp/en/" target="_blank" rel="noopener">Miraikan ↗</a><a class="link" href="https://www.unicorn-gundam-statue.jp/" target="_blank" rel="noopener">Unicorn Gundam ↗</a></div>
+</article><article class="day" data-date="2026-07-10">
+  <button class="dayhead" aria-expanded="false">
+    <span class="date">10.07..</span>
+    <span><b>Meiji + Shibuya</b><small>Meiji Shrine, Harajuku kurz, Shibuya PARCO gezielt: Nintendo und Pokémon.</small></span>
+    <span class="chev">⌄</span>
+  </button>
+  <div class="details"><a class="link" href="https://www.meijijingu.or.jp/en/" target="_blank" rel="noopener">Meiji Jingu ↗</a><a class="link" href="https://shibuya.parco.jp/" target="_blank" rel="noopener">Shibuya PARCO ↗</a><a class="link" href="https://www.nintendo.com/jp/officialstore/" target="_blank" rel="noopener">Nintendo TOKYO ↗</a><a class="link" href="https://shop.pokemon.co.jp/en/shop/pokemoncenter-shibuya/" target="_blank" rel="noopener">Pokémon Center Shibuya ↗</a></div>
+</article><article class="day" data-date="2026-07-11">
+  <button class="dayhead" aria-expanded="false">
+    <span class="date">11.07..</span>
+    <span><b>Kamakura + Enoshima</b><small>Großer Buddha, Hase-dera, Enoden, Enoshima, Meer und Aussicht.</small></span>
+    <span class="chev">⌄</span>
+  </button>
+  <div class="details"><a class="link" href="https://www.kotoku-in.jp/en/" target="_blank" rel="noopener">Kōtoku-in ↗</a><a class="link" href="https://www.hasedera.jp/en/" target="_blank" rel="noopener">Hase-dera ↗</a><a class="link" href="https://www.enoden.co.jp/en/" target="_blank" rel="noopener">Enoden ↗</a></div>
+</article><article class="day" data-date="2026-07-12">
+  <button class="dayhead" aria-expanded="false">
+    <span class="date">12.07..</span>
+    <span><b>Ueno</b><small>National Museum of Nature and Science, Ueno Park, Ameyoko.</small></span>
+    <span class="chev">⌄</span>
+  </button>
+  <div class="details"><a class="link" href="https://www.kahaku.go.jp/english/" target="_blank" rel="noopener">National Museum of Nature and Science ↗</a></div>
+</article><article class="day" data-date="2026-07-13">
+  <button class="dayhead" aria-expanded="false">
+    <span class="date">13.07..</span>
+    <span><b>Asakusa FIX</b><small>Sensō-ji früh. Capybara Café 11:00–12:30. Danach Samurai Ninja Museum.</small></span>
+    <span class="chev">⌄</span>
+  </button>
+  <div class="details"><a class="link" href="https://www.senso-ji.jp/english/" target="_blank" rel="noopener">Sensō-ji ↗</a><a class="link" href="https://samuraininjamuseum.com/" target="_blank" rel="noopener">Samurai Ninja Museum ↗</a></div>
+</article><article class="day" data-date="2026-07-14">
+  <button class="dayhead" aria-expanded="false">
+    <span class="date">14.07..</span>
+    <span><b>Shinkansen + Hakone</b><small>Shinagawa → Odawara im Tōkaidō-Shinkansen. Danach Golden Route: Gōra, Sōunzan, Ōwakudani, Tōgendai, Ashi-See.</small></span>
+    <span class="chev">⌄</span>
+  </button>
+  <div class="details"><a class="link" href="https://global.jr-central.co.jp/en/info/timetable/" target="_blank" rel="noopener">JR Central Fahrplan ↗</a><a class="link" href="https://global.jr-central.co.jp/en/onlinebooking/" target="_blank" rel="noopener">Tōkaidō-Shinkansen ↗</a><a class="link" href="https://www.hakonenavi.jp/international/en/" target="_blank" rel="noopener">Hakone Navi ↗</a><a class="link" href="https://www.hakonenavi.jp/international/en/discount_passes/free_pass" target="_blank" rel="noopener">Hakone Freepass ↗</a><a class="link" href="https://odakyu-global.com/transport-guide/hakone-area-status/" target="_blank" rel="noopener">Hakone Verkehrsstatus ↗</a></div>
+</article><article class="day" data-date="2026-07-15">
+  <button class="dayhead" aria-expanded="false">
+    <span class="date">15.07..</span>
+    <span><b>teamLab Borderless</b><small>Früher Slot. Ca. 3 Stunden teamLab Borderless, danach Azabudai Hills.</small></span>
+    <span class="chev">⌄</span>
+  </button>
+  <div class="details"><a class="link" href="https://www.teamlab.art/e/tokyo/" target="_blank" rel="noopener">teamLab Borderless ↗</a><a class="link" href="https://www.azabudai-hills.com/en/" target="_blank" rel="noopener">Azabudai Hills ↗</a></div>
+</article><article class="day" data-date="2026-07-16">
+  <button class="dayhead" aria-expanded="false">
+    <span class="date">16.07..</span>
+    <span><b>Ruhetag</b><small>Ausschlafen, Wäsche, lokales Essen, höchstens eine kleine Aktivität.</small></span>
+    <span class="chev">⌄</span>
+  </button>
+  <div class="details"><a class="link" href="https://www.aquarium.gr.jp/en/" target="_blank" rel="noopener">Shinagawa Aquarium ↗</a></div>
+</article><article class="day" data-date="2026-07-17">
+  <button class="dayhead" aria-expanded="false">
+    <span class="date">17.07..</span>
+    <span><b>Yokohama</b><small>Minato Mirai, Cup Noodles Museum, Hafen, Chinatown.</small></span>
+    <span class="chev">⌄</span>
+  </button>
+  <div class="details"><a class="link" href="https://www.cupnoodles-museum.jp/en/yokohama/" target="_blank" rel="noopener">Cup Noodles Museum ↗</a><a class="link" href="https://www.cupnoodles-museum.jp/en/yokohama/attractions/mc-factory/" target="_blank" rel="noopener">MY CUPNOODLES Factory ↗</a><a class="link" href="https://www.yokohamajapan.com/" target="_blank" rel="noopener">Yokohama Visitors Guide ↗</a></div>
+</article><article class="day" data-date="2026-07-18">
+  <button class="dayhead" aria-expanded="false">
+    <span class="date">18.07..</span>
+    <span><b>Puffertag</b><small>Bevorzugt Wetter-/Hakone-Puffer oder Erholung. Optional Kawagoe.</small></span>
+    <span class="chev">⌄</span>
+  </button>
+  <div class="details"><a class="link" href="https://koedo.or.jp/en/" target="_blank" rel="noopener">Kawagoe Tourism ↗</a></div>
+</article><article class="day" data-date="2026-07-19">
+  <button class="dayhead" aria-expanded="false">
+    <span class="date">19.07..</span>
+    <span><b>Akihabara gezielt</b><small>Aktuelle Games, optional Retro-Gaming, Gachapon/Arcade. Nur vorab gewählte Ziele.</small></span>
+    <span class="chev">⌄</span>
+  </button>
+  <div class="details"><a class="link" href="https://visit-chiyoda.tokyo/app/en/area/akihabara/" target="_blank" rel="noopener">Akihabara Guide ↗</a></div>
+</article><article class="day" data-date="2026-07-20">
+  <button class="dayhead" aria-expanded="false">
+    <span class="date">20.07..</span>
+    <span><b>Marine Day</b><small>Flexibel: Tokyo Bay, Park, Lieblingsviertel oder Hakone-Ersatztag.</small></span>
+    <span class="chev">⌄</span>
+  </button>
+  <div class="details"><a class="link" href="https://www.gotokyo.org/en/" target="_blank" rel="noopener">Tokyo Official Travel Guide ↗</a></div>
+</article><article class="day" data-date="2026-07-21">
+  <button class="dayhead" aria-expanded="false">
+    <span class="date">21.07..</span>
+    <span><b>Tokyo Station + Abschluss</b><small>Character Street, gezielte Souvenirs, früh zurück und packen.</small></span>
+    <span class="chev">⌄</span>
+  </button>
+  <div class="details"><a class="link" href="https://www.tokyoeki-1bangai.co.jp/en/" target="_blank" rel="noopener">Tokyo Character Street ↗</a></div>
+</article><article class="day" data-date="2026-07-22">
+  <button class="dayhead" aria-expanded="false">
+    <span class="date">22.07..</span>
+    <span><b>Abflug</b><small>Riverside Omori → Haneda. Keine weiteren Programmpunkte.</small></span>
+    <span class="chev">⌄</span>
+  </button>
+  <div class="details"><a class="link" href="https://tokyo-haneda.com/en/" target="_blank" rel="noopener">Haneda Airport ↗</a></div>
+</article>
+  <p class="note">Tipp: In Safari öffnen, Teilen-Symbol antippen und „Zum Home-Bildschirm“ wählen.</p>
+</main>
+<script>
+const ds=[...document.querySelectorAll('.day')];
+ds.forEach(d=>d.querySelector('.dayhead').onclick=()=>{
+  d.classList.toggle('open');
+  d.querySelector('.dayhead').setAttribute('aria-expanded', d.classList.contains('open'));
+});
+function localKey(){
+ const now=new Date();
+ return now.getFullYear()+'-'+String(now.getMonth()+1).padStart(2,'0')+'-'+String(now.getDate()).padStart(2,'0');
+}
+function showToday(){
+ const key=localKey();
+ ds.forEach(d=>d.classList.remove('today'));
+ const d=ds.find(x=>x.dataset.date===key);
+ if(d){ d.classList.add('today','open'); d.scrollIntoView({behavior:'smooth',block:'center'}); }
+ else alert('Heute liegt außerhalb des Reisezeitraums 7.–22. Juli 2026.');
+}
+document.getElementById('todayBtn').onclick=showToday;
+let opened=false;
+document.getElementById('allBtn').onclick=e=>{
+ opened=!opened;
+ ds.forEach(d=>d.classList.toggle('open',opened));
+ e.target.textContent=opened?'Alle schließen':'Alle öffnen';
+};
+if('serviceWorker' in navigator) navigator.serviceWorker.register('./sw.js');
+</script>
+</body>
+</html>
