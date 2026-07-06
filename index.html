@@ -39,267 +39,270 @@ small{display:block;color:var(--muted);font-size:13px;line-height:1.35;margin-to
 .slotlinks{display:flex;gap:7px;flex-wrap:wrap;margin-top:8px}
 .link{display:inline-block;text-decoration:none;background:var(--soft);color:#164d67;padding:8px 10px;border-radius:10px;font-size:12px;font-weight:750}
 .photo-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin:12px 0 0}
-.photo-card{min-height:88px;border-radius:13px;padding:10px;color:white;display:flex;align-items:flex-end;font-size:12px;font-weight:850;line-height:1.2;text-shadow:0 1px 4px #0008;background-size:cover;background-position:center;overflow:hidden;position:relative}
+.photo-card{min-height:92px;border-radius:13px;padding:10px;color:white;display:flex;align-items:flex-end;font-size:12px;font-weight:850;line-height:1.2;text-shadow:0 1px 4px #0008;background-size:cover;background-position:center;overflow:hidden;position:relative}
 .photo-card:before{content:"";position:absolute;inset:0;background:linear-gradient(#0001,#0008)}
 .photo-card span{position:relative;z-index:1}
 .p1{background-image:url('https://images.unsplash.com/photo-1627308595229-7830a5c91f9f?auto=format&fit=crop&w=600&q=70')}
 .p2{background-image:url('https://images.unsplash.com/photo-1604908554161-7a7f2d3d4d15?auto=format&fit=crop&w=600&q=70')}
 .p3{background-image:url('https://images.unsplash.com/photo-1615361200141-f4592c37e7ba?auto=format&fit=crop&w=600&q=70')}
 .p4{background-image:url('https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=600&q=70')}
+.p5{background-image:url('https://images.unsplash.com/photo-1569058242567-93de6f36f8e4?auto=format&fit=crop&w=600&q=70')}
+.p6{background-image:url('https://images.unsplash.com/photo-1617093727343-374698b1b08d?auto=format&fit=crop&w=600&q=70')}
+.p7{background-image:url('https://images.unsplash.com/photo-1604908176997-125f25cc6f3d?auto=format&fit=crop&w=600&q=70')}
+.p8{background-image:url('https://images.unsplash.com/photo-1569718212165-3a8278d5f624?auto=format&fit=crop&w=600&q=70')}
+.p9{background-image:url('https://images.unsplash.com/photo-1633436375153-d7045cb93e38?auto=format&fit=crop&w=600&q=70')}
+.p10{background-image:url('https://images.unsplash.com/photo-1515003197210-e0cd71810b5f?auto=format&fit=crop&w=600&q=70')}
+.p11{background-image:url('https://images.unsplash.com/photo-1585032226651-759b368d7246?auto=format&fit=crop&w=600&q=70')}
+.p12{background-image:url('https://images.unsplash.com/photo-1612929633738-8fe44f7ec841?auto=format&fit=crop&w=600&q=70')}
 .note{font-size:12px;color:var(--muted);line-height:1.45;margin:12px 4px 0}
 @media (max-width:520px){.photo-grid{grid-template-columns:repeat(2,1fr)}}
 @media (max-width:420px){.slot{grid-template-columns:76px 1fr}.time{font-size:11.5px}.slottext{font-size:13.5px}}
 @media (prefers-color-scheme: dark){
-  :root{--ink:#f5f5f5;--paper:#141211;--card:#211f1d;--muted:#b5aca2;--line:#3a332e;--soft:#302d29;--food:#292419}
-  .toolbar button{background:#211f1d;color:#f5f5f5}
-  .link{color:#8dd2ff}
-  .foodtag{background:#5b4214;color:#ffe8b0}
+ :root{--ink:#f5f5f5;--paper:#141211;--card:#211f1d;--muted:#b5aca2;--line:#3a332e;--soft:#302d29;--food:#292419}
+ .toolbar button{background:#211f1d;color:#f5f5f5}
+ .link{color:#8dd2ff}
+ .foodtag{background:#5b4214;color:#ffe8b0}
 }
 </style>
 </head>
 <body>
-<header><h1>🇯🇵 Japan Reiseplan</h1><p>Tokyo · 7.–22. Juli 2026 · Riverside Omori · mit Frühstücksideen</p></header>
+<header><h1>Japan Reiseplan</h1><p>Tokyo · 7.–22. Juli 2026 · Riverside Omori · mit 7-Eleven-Food-Guide</p></header>
 <main>
-  <div class="toolbar">
-    <button id="todayBtn">Heute anzeigen</button>
-    <button id="allBtn">Alle öffnen</button>
-  </div>
-  <article class="day" data-date="2026-07-07">
-  <button class="dayhead" aria-expanded="false">
-    <span class="date">07.07.</span>
-    <span><b>Ankunft in Tokyo</b><small>Haneda → Riverside Omori. Ankommen, Konbini, schlafen.</small></span>
-    <span class="chev">⌄</span>
-  </button>
-  <ol class="details"><li class="slot">
-  <div class="time">Abends</div>
-  <div class="slotbody"><div class="slottext">Ankunft am Haneda Airport. Nach Immigration und Gepäck direkt zur Unterkunft.</div><div class="slotlinks"><a class="link" href="https://tokyo-haneda.com/en/" target="_blank" rel="noopener">Haneda Airport ↗</a></div></div>
-</li><li class="slot food">
-  <div class="time">Danach</div>
-  <div class="slotbody"><div class="slottext"><span class="foodtag">7-Eleven-Test</span><b>Frühstück für morgen kaufen:</b> Onigiri mit Lachs oder Thunfisch-Mayo, Tamago Sando, Joghurt, Banane, Wasser und Kaffee/Milch. Perfekt, wenn ihr am ersten Morgen noch Jetlag habt.</div><div class="slotlinks"><a class="link" href="https://www.sej.co.jp/products/a/onigiri/" target="_blank" rel="noopener">7-Eleven Onigiri ↗</a><a class="link" href="https://www.sej.co.jp/products/a/sandwich/" target="_blank" rel="noopener">7-Eleven Sandwiches ↗</a></div></div>
-</li><li class="slot">
-  <div class="time">Ziel</div>
-  <div class="slotbody"><div class="slottext">Möglichst schnell schlafen; Jetlag-Puffer für den ersten Morgen.</div></div>
-</li></ol>
-</article><article class="day" data-date="2026-07-08">
-  <button class="dayhead" aria-expanded="false">
-    <span class="date">08.07.</span>
-    <span><b>Sanfter Einstieg</b><small>Ōmori/Shinagawa, optional Aquarium oder Park.</small></span>
-    <span class="chev">⌄</span>
-  </button>
-  <ol class="details"><li class="slot food">
-  <div class="time">08:30–09:30</div>
-  <div class="slotbody"><div class="slottext"><span class="foodtag">Konbini-Frühstück</span>Gemütlich in der Unterkunft: Onigiri, Tamago Sando, Obst/Joghurt und Kaffee aus dem 7-Eleven. Kinderidee: Jeder sucht sich ein unbekanntes Teil zum Probieren aus.</div><div class="slotlinks"><a class="link" href="https://www.sej.co.jp/products/" target="_blank" rel="noopener">7-Eleven Produkte ↗</a></div></div>
-</li><li class="slot">
-  <div class="time">10:00–12:30</div>
-  <div class="slotbody"><div class="slottext">Shinagawa Aquarium oder Park/Umgebung als unkomplizierter lokaler Programmpunkt.</div><div class="slotlinks"><a class="link" href="https://www.aquarium.gr.jp/en/" target="_blank" rel="noopener">Shinagawa Aquarium ↗</a></div></div>
-</li><li class="slot">
-  <div class="time">12:30–13:30</div>
-  <div class="slotbody"><div class="slottext">Mittagessen ohne Reservierung.</div></div>
-</li><li class="slot">
-  <div class="time">14:00–16:00</div>
-  <div class="slotbody"><div class="slottext">Park, lokale Umgebung oder zurück in die Unterkunft.</div></div>
-</li><li class="slot">
-  <div class="time">17:00–18:00</div>
-  <div class="slotbody"><div class="slottext">Frühes Abendessen. Kein spontanes Zusatzprogramm.</div></div>
-</li></ol>
-</article><article class="day" data-date="2026-07-09">
-  <button class="dayhead" aria-expanded="false">
-    <span class="date">09.07.</span>
-    <span><b>Wasserbus + Odaiba</b><small>Asakusa → Wasserbus nach Odaiba, Miraikan, Gundam.</small></span>
-    <span class="chev">⌄</span>
-  </button>
-  <ol class="details"><li class="slot food">
-  <div class="time">07:15–07:45</div>
-  <div class="slotbody"><div class="slottext"><span class="foodtag">Schnell & mobil</span>Frühstück vor Abfahrt: 7-Eleven-Onigiri oder Sandwich plus Getränk. Für die Wasserbus-Strecke zusätzlich kleine Snacks einpacken, aber nicht auf dem Pier trödeln.</div><div class="slotlinks"><a class="link" href="https://www.sej.co.jp/products/a/onigiri/" target="_blank" rel="noopener">Onigiri-Auswahl ↗</a></div></div>
-</li><li class="slot">
-  <div class="time">ca. 08:00</div>
-  <div class="slotbody"><div class="slottext">Abfahrt ab Riverside Omori.</div></div>
-</li><li class="slot">
-  <div class="time">ca. 09:15</div>
-  <div class="slotbody"><div class="slottext">Ankunft Asakusa. Nur kurzer Blick ans Sumida-Ufer, dann zum Pier.</div></div>
-</li><li class="slot">
-  <div class="time">Vormittag</div>
-  <div class="slotbody"><div class="slottext">Wasserbus Asakusa → Odaiba Seaside Park. Verbindung kurz vorher prüfen.</div><div class="slotlinks"><a class="link" href="https://www.suijobus.co.jp/en/" target="_blank" rel="noopener">TOKYO CRUISE ↗</a></div></div>
-</li><li class="slot">
-  <div class="time">12:00–13:00</div>
-  <div class="slotbody"><div class="slottext">Mittagessen in Odaiba.</div></div>
-</li><li class="slot">
-  <div class="time">13:00–15:30</div>
-  <div class="slotbody"><div class="slottext">Miraikan: 2–2,5 Stunden, gezielt interessante Bereiche.</div><div class="slotlinks"><a class="link" href="https://www.miraikan.jst.go.jp/en/" target="_blank" rel="noopener">Miraikan ↗</a></div></div>
-</li><li class="slot">
-  <div class="time">16:00–16:30</div>
-  <div class="slotbody"><div class="slottext">Unicorn Gundam.</div><div class="slotlinks"><a class="link" href="https://www.unicorn-gundam-statue.jp/" target="_blank" rel="noopener">Unicorn Gundam ↗</a></div></div>
-</li><li class="slot">
-  <div class="time">16:30–18:00</div>
-  <div class="slotbody"><div class="slottext">Waterfront, Eis, Aussicht; danach Rückfahrt.</div></div>
-</li></ol>
-</article><article class="day" data-date="2026-07-10">
-  <button class="dayhead" aria-expanded="false">
-    <span class="date">10.07.</span>
-    <span><b>Meiji, Harajuku + Shibuya</b><small>Meiji Shrine, Harajuku kurz, Shibuya PARCO gezielt.</small></span>
-    <span class="chev">⌄</span>
-  </button>
-  <ol class="details"><li class="slot food">
-  <div class="time">07:45–08:15</div>
-  <div class="slotbody"><div class="slottext"><span class="foodtag">Bäckerei/Kaffee</span>Kleines Frühstück vor Abfahrt: Melonpan, Anpan oder Croissant plus Kaffee/Milch. Nicht zu schwer, weil mittags Shibuya eingeplant ist.</div></div>
-</li><li class="slot">
-  <div class="time">08:30</div>
-  <div class="slotbody"><div class="slottext">Abfahrt.</div></div>
-</li><li class="slot">
-  <div class="time">09:30–11:00</div>
-  <div class="slotbody"><div class="slottext">Meiji Shrine und Waldwege.</div><div class="slotlinks"><a class="link" href="https://www.meijijingu.or.jp/en/" target="_blank" rel="noopener">Meiji Jingu ↗</a></div></div>
-</li><li class="slot">
-  <div class="time">11:15–12:00</div>
-  <div class="slotbody"><div class="slottext">Harajuku / Takeshita Street nur kurz.</div></div>
-</li><li class="slot">
-  <div class="time">13:00–15:00</div>
-  <div class="slotbody"><div class="slottext">Shibuya PARCO als Shopping-Mission: Nintendo, Pokémon und höchstens ein weiterer Wunschshop.</div><div class="slotlinks"><a class="link" href="https://shibuya.parco.jp/" target="_blank" rel="noopener">Shibuya PARCO ↗</a><a class="link" href="https://www.nintendo.com/jp/officialstore/" target="_blank" rel="noopener">Nintendo TOKYO ↗</a><a class="link" href="https://shop.pokemon.co.jp/en/shop/pokemoncenter-shibuya/" target="_blank" rel="noopener">Pokémon Center Shibuya ↗</a></div></div>
-</li><li class="slot">
-  <div class="time">15:15–16:00</div>
-  <div class="slotbody"><div class="slottext">Shibuya Crossing.</div></div>
-</li><li class="slot">
-  <div class="time">16:00–17:00</div>
-  <div class="slotbody"><div class="slottext">Hachikō und Umgebung; danach Rückfahrt.</div></div>
-</li></ol>
-</article>
-<article class="day" data-date="2026-07-11">
+ <div class="toolbar">
+  <button id="todayBtn">Heute anzeigen</button>
+  <button id="allBtn">Alle öffnen</button>
+ </div>
+
+ <article class="day" data-date="2026-07-07">
+  <button class="dayhead" aria-expanded="false"><span class="date">07.07.</span><span><b>Ankunft in Tokyo</b><small>Haneda → Riverside Omori. Ankommen, Konbini, schlafen.</small></span><span class="chev">⌄</span></button>
+  <ol class="details">
+   <li class="slot"><div class="time">Abends</div><div class="slotbody"><div class="slottext">Ankunft am Haneda Airport. Nach Immigration und Gepäck direkt zur Unterkunft.</div><div class="slotlinks"><a class="link" href="https://tokyo-haneda.com/en/" target="_blank" rel="noopener">Haneda Airport ↗</a></div></div></li>
+   <li class="slot food"><div class="time">Danach</div><div class="slotbody"><div class="slottext"><span class="foodtag">7-Eleven-Test</span><b>Frühstück für morgen kaufen:</b> Onigiri mit Lachs oder Thunfisch-Mayo, Tamago Sando, Joghurt, Banane, Wasser und Kaffee/Milch. Perfekt, wenn ihr am ersten Morgen noch Jetlag habt.</div><div class="slotlinks"><a class="link" href="https://www.sej.co.jp/products/a/onigiri/" target="_blank" rel="noopener">7-Eleven Onigiri ↗</a><a class="link" href="https://www.sej.co.jp/products/a/sandwich/" target="_blank" rel="noopener">7-Eleven Sandwiches ↗</a></div></div></li>
+   <li class="slot"><div class="time">Ziel</div><div class="slotbody"><div class="slottext">Möglichst schnell schlafen; Jetlag-Puffer für den ersten Morgen.</div></div></li>
+  </ol>
+ </article>
+
+ <article class="day" data-date="2026-07-08">
+  <button class="dayhead" aria-expanded="false"><span class="date">08.07.</span><span><b>Sanfter Einstieg</b><small>Ōmori/Shinagawa, optional Aquarium oder Park.</small></span><span class="chev">⌄</span></button>
+  <ol class="details">
+   <li class="slot food"><div class="time">08:30–09:30</div><div class="slotbody"><div class="slottext"><span class="foodtag">Konbini-Frühstück</span>Gemütlich in der Unterkunft: Onigiri, Tamago Sando, Obst/Joghurt und Kaffee aus dem 7-Eleven. Kinderidee: Jeder sucht sich ein unbekanntes Teil zum Probieren aus.</div><div class="slotlinks"><a class="link" href="https://www.sej.co.jp/products/" target="_blank" rel="noopener">7-Eleven Produkte ↗</a></div></div></li>
+   <li class="slot"><div class="time">10:00–12:30</div><div class="slotbody"><div class="slottext">Shinagawa Aquarium oder Park/Umgebung als unkomplizierter lokaler Programmpunkt.</div><div class="slotlinks"><a class="link" href="https://www.aquarium.gr.jp/en/" target="_blank" rel="noopener">Shinagawa Aquarium ↗</a></div></div></li>
+   <li class="slot food"><div class="time">12:30–13:30</div><div class="slotbody"><div class="slottext"><span class="foodtag">7-Eleven Lunch</span><b>Probier-Mittagessen ohne Reservierung:</b> Bento mit Karaage oder Chicken, Curry mit Reis, Soba/Udon oder Pasta aus dem Kühlregal. Kauft 2–3 Gerichte und teilt sie in der Unterkunft oder im Park.</div><div class="slotlinks"><a class="link" href="https://www.sej.co.jp/products/a/daily/" target="_blank" rel="noopener">Bentos & warme Gerichte ↗</a></div></div></li>
+   <li class="slot"><div class="time">14:00–16:00</div><div class="slotbody"><div class="slottext">Park, lokale Umgebung oder zurück in die Unterkunft.</div></div></li>
+   <li class="slot food"><div class="time">17:00–18:00</div><div class="slotbody"><div class="slottext"><span class="foodtag">7-Eleven Dinner</span><b>Erster Konbini-Abend:</b> Ramen aus dem Kühlregal, Gyudon/Donburi, Gyoza plus Salat/Edamame und ein Dessert. Kein spontanes Zusatzprogramm.</div></div></li>
+  </ol>
+ </article>
+
+ <article class="day" data-date="2026-07-09">
+  <button class="dayhead" aria-expanded="false"><span class="date">09.07.</span><span><b>Wasserbus + Odaiba</b><small>Asakusa → Wasserbus nach Odaiba, Miraikan, Gundam.</small></span><span class="chev">⌄</span></button>
+  <ol class="details">
+   <li class="slot food"><div class="time">07:15–07:45</div><div class="slotbody"><div class="slottext"><span class="foodtag">Schnell & mobil</span>Frühstück vor Abfahrt: 7-Eleven-Onigiri oder Sandwich plus Getränk. Für die Wasserbus-Strecke zusätzlich kleine Snacks einpacken, aber nicht auf dem Pier trödeln.</div><div class="slotlinks"><a class="link" href="https://www.sej.co.jp/products/a/onigiri/" target="_blank" rel="noopener">Onigiri-Auswahl ↗</a></div></div></li>
+   <li class="slot"><div class="time">ca. 08:00</div><div class="slotbody"><div class="slottext">Abfahrt ab Riverside Omori.</div></div></li>
+   <li class="slot"><div class="time">ca. 09:15</div><div class="slotbody"><div class="slottext">Ankunft Asakusa. Nur kurzer Blick ans Sumida-Ufer, dann zum Pier.</div></div></li>
+   <li class="slot"><div class="time">Vormittag</div><div class="slotbody"><div class="slottext">Wasserbus Asakusa → Odaiba Seaside Park. Verbindung kurz vorher prüfen.</div><div class="slotlinks"><a class="link" href="https://www.suijobus.co.jp/en/" target="_blank" rel="noopener">TOKYO CRUISE ↗</a></div></div></li>
+   <li class="slot"><div class="time">12:00–13:00</div><div class="slotbody"><div class="slottext">Mittagessen in Odaiba.</div></div></li>
+   <li class="slot"><div class="time">13:00–15:30</div><div class="slotbody"><div class="slottext">Miraikan: 2–2,5 Stunden, gezielt interessante Bereiche.</div><div class="slotlinks"><a class="link" href="https://www.miraikan.jst.go.jp/en/" target="_blank" rel="noopener">Miraikan ↗</a></div></div></li>
+   <li class="slot"><div class="time">16:00–16:30</div><div class="slotbody"><div class="slottext">Unicorn Gundam.</div><div class="slotlinks"><a class="link" href="https://www.unicorn-gundam-statue.jp/" target="_blank" rel="noopener">Unicorn Gundam ↗</a></div></div></li>
+   <li class="slot"><div class="time">16:30–18:00</div><div class="slotbody"><div class="slottext">Waterfront, Eis, Aussicht; danach Rückfahrt.</div></div></li>
+  </ol>
+ </article>
+
+ <article class="day" data-date="2026-07-10">
+  <button class="dayhead" aria-expanded="false"><span class="date">10.07.</span><span><b>Meiji, Harajuku + Shibuya</b><small>Meiji Shrine, Harajuku kurz, Shibuya PARCO gezielt.</small></span><span class="chev">⌄</span></button>
+  <ol class="details">
+   <li class="slot food"><div class="time">07:45–08:15</div><div class="slotbody"><div class="slottext"><span class="foodtag">Bäckerei/Kaffee</span>Kleines Frühstück vor Abfahrt: Melonpan, Anpan oder Croissant plus Kaffee/Milch. Nicht zu schwer, weil mittags Shibuya eingeplant ist.</div></div></li>
+   <li class="slot"><div class="time">08:30</div><div class="slotbody"><div class="slottext">Abfahrt.</div></div></li>
+   <li class="slot"><div class="time">09:30–11:00</div><div class="slotbody"><div class="slottext">Meiji Shrine und Waldwege.</div><div class="slotlinks"><a class="link" href="https://www.meijijingu.or.jp/en/" target="_blank" rel="noopener">Meiji Jingu ↗</a></div></div></li>
+   <li class="slot"><div class="time">11:15–12:00</div><div class="slotbody"><div class="slottext">Harajuku / Takeshita Street nur kurz.</div></div></li>
+   <li class="slot"><div class="time">13:00–15:00</div><div class="slotbody"><div class="slottext">Shibuya PARCO als Shopping-Mission: Nintendo, Pokémon und höchstens ein weiterer Wunschshop.</div><div class="slotlinks"><a class="link" href="https://shibuya.parco.jp/" target="_blank" rel="noopener">Shibuya PARCO ↗</a><a class="link" href="https://www.nintendo.com/jp/officialstore/" target="_blank" rel="noopener">Nintendo TOKYO ↗</a><a class="link" href="https://shop.pokemon.co.jp/en/shop/pokemoncenter-shibuya/" target="_blank" rel="noopener">Pokémon Center Shibuya ↗</a></div></div></li>
+   <li class="slot"><div class="time">15:15–16:00</div><div class="slotbody"><div class="slottext">Shibuya Crossing.</div></div></li>
+   <li class="slot"><div class="time">16:00–17:00</div><div class="slotbody"><div class="slottext">Hachikō und Umgebung; danach Rückfahrt.</div></div></li>
+  </ol>
+ </article>
+
+ <article class="day" data-date="2026-07-11">
   <button class="dayhead" aria-expanded="false"><span class="date">11.07.</span><span><b>Kamakura + Enoshima</b><small>Großer Buddha, Hase-dera, Enoden, Enoshima.</small></span><span class="chev">⌄</span></button>
-  <ol class="details"><li class="slot food"><div class="time">06:45</div><div class="slotbody"><div class="slottext"><span class="foodtag">Frühstart</span>Frühstück aus dem Konbini: Onigiri, Banane/Joghurt und Getränke. Zusätzlich kleine Snacks für Zug und Enoshima einpacken.</div><div class="slotlinks"><a class="link" href="https://www.sej.co.jp/products/a/onigiri/" target="_blank" rel="noopener">7-Eleven Onigiri ↗</a></div></div></li>
-<li class="slot"><div class="time">07:15</div><div class="slotbody"><div class="slottext">Abfahrt.</div></div></li>
-<li class="slot"><div class="time">09:00–09:45</div><div class="slotbody"><div class="slottext">Großer Buddha von Kamakura.</div><div class="slotlinks"><a class="link" href="https://www.kotoku-in.jp/en/" target="_blank" rel="noopener">Kōtoku-in ↗</a></div></div></li>
-<li class="slot"><div class="time">10:00–11:15</div><div class="slotbody"><div class="slottext">Hase-dera; keine zusätzlichen Tempel erzwingen.</div><div class="slotlinks"><a class="link" href="https://www.hasedera.jp/en/" target="_blank" rel="noopener">Hase-dera ↗</a></div></div></li>
-<li class="slot"><div class="time">11:30–12:30</div><div class="slotbody"><div class="slottext">Mittagessen.</div></div></li>
-<li class="slot"><div class="time">Nachmittag</div><div class="slotbody"><div class="slottext">Mit der Enoden Richtung Enoshima.</div><div class="slotlinks"><a class="link" href="https://www.enoden.co.jp/en/" target="_blank" rel="noopener">Enoden ↗</a></div></div></li>
-<li class="slot"><div class="time">13:30–16:30</div><div class="slotbody"><div class="slottext">Enoshima: Meer, Snacks, Aussicht und Inselgefühl.</div><div class="slotlinks"><a class="link" href="https://odakyu-global.com/passes/enoshima-kamakura-freepass/" target="_blank" rel="noopener">Enoshima-Kamakura Pass ↗</a></div></div></li>
-<li class="slot"><div class="time">16:30–17:00</div><div class="slotbody"><div class="slottext">Rückreise beginnen; ca. 19:00 Unterkunft.</div></div></li></ol>
-</article>
-<article class="day" data-date="2026-07-12">
+  <ol class="details">
+   <li class="slot food"><div class="time">06:45</div><div class="slotbody"><div class="slottext"><span class="foodtag">Frühstart</span>Frühstück aus dem Konbini: Onigiri, Banane/Joghurt und Getränke. Zusätzlich kleine Snacks für Zug und Enoshima einpacken.</div><div class="slotlinks"><a class="link" href="https://www.sej.co.jp/products/a/onigiri/" target="_blank" rel="noopener">7-Eleven Onigiri ↗</a></div></div></li>
+   <li class="slot"><div class="time">07:15</div><div class="slotbody"><div class="slottext">Abfahrt.</div></div></li>
+   <li class="slot"><div class="time">09:00–09:45</div><div class="slotbody"><div class="slottext">Großer Buddha von Kamakura.</div><div class="slotlinks"><a class="link" href="https://www.kotoku-in.jp/en/" target="_blank" rel="noopener">Kōtoku-in ↗</a></div></div></li>
+   <li class="slot"><div class="time">10:00–11:15</div><div class="slotbody"><div class="slottext">Hase-dera; keine zusätzlichen Tempel erzwingen.</div><div class="slotlinks"><a class="link" href="https://www.hasedera.jp/en/" target="_blank" rel="noopener">Hase-dera ↗</a></div></div></li>
+   <li class="slot"><div class="time">11:30–12:30</div><div class="slotbody"><div class="slottext">Mittagessen.</div></div></li>
+   <li class="slot"><div class="time">Nachmittag</div><div class="slotbody"><div class="slottext">Mit der Enoden Richtung Enoshima.</div><div class="slotlinks"><a class="link" href="https://www.enoden.co.jp/en/" target="_blank" rel="noopener">Enoden ↗</a></div></div></li>
+   <li class="slot"><div class="time">13:30–16:30</div><div class="slotbody"><div class="slottext">Enoshima: Meer, Snacks, Aussicht und Inselgefühl.</div><div class="slotlinks"><a class="link" href="https://odakyu-global.com/passes/enoshima-kamakura-freepass/" target="_blank" rel="noopener">Enoshima-Kamakura Pass ↗</a></div></div></li>
+   <li class="slot"><div class="time">16:30–17:00</div><div class="slotbody"><div class="slottext">Rückreise beginnen; ca. 19:00 Unterkunft.</div></div></li>
+  </ol>
+ </article>
+
+ <article class="day" data-date="2026-07-12">
   <button class="dayhead" aria-expanded="false"><span class="date">12.07.</span><span><b>Ueno</b><small>Naturkundemuseum, Ueno Park, Ameyoko.</small></span><span class="chev">⌄</span></button>
-  <ol class="details"><li class="slot food"><div class="time">07:15–07:45</div><div class="slotbody"><div class="slottext"><span class="foodtag">Café/Morning Set</span>Wenn ihr wach seid: Kissaten-ähnliches Morning Set mit Toast, Ei, kleinem Salat und Kaffee. Alternativ wieder Konbini, damit ihr pünktlich im Museum seid.</div></div></li>
-<li class="slot"><div class="time">08:00</div><div class="slotbody"><div class="slottext">Abfahrt.</div></div></li>
-<li class="slot"><div class="time">09:00–12:00</div><div class="slotbody"><div class="slottext">National Museum of Nature and Science: Dinosaurier, Tiere, Naturgeschichte, Technik.</div><div class="slotlinks"><a class="link" href="https://www.kahaku.go.jp/english/" target="_blank" rel="noopener">National Museum of Nature and Science ↗</a></div></div></li>
-<li class="slot"><div class="time">12:15–13:15</div><div class="slotbody"><div class="slottext">Mittagessen.</div></div></li>
-<li class="slot"><div class="time">13:30–14:30</div><div class="slotbody"><div class="slottext">Ueno Park.</div><div class="slotlinks"><a class="link" href="https://www.kensetsu.metro.tokyo.lg.jp/jimusho/toubuk/ueno/en_index.html" target="_blank" rel="noopener">Ueno Park ↗</a></div></div></li>
-<li class="slot"><div class="time">14:45–16:00</div><div class="slotbody"><div class="slottext">Ameyoko als Atmosphäre und Snack-Stopp, nicht als Einkaufsauftrag.</div></div></li>
-<li class="slot"><div class="time">16:00–17:00</div><div class="slotbody"><div class="slottext">Rückfahrt.</div></div></li></ol>
-</article>
-<article class="day" data-date="2026-07-13">
+  <ol class="details">
+   <li class="slot food"><div class="time">07:15–07:45</div><div class="slotbody"><div class="slottext"><span class="foodtag">Café/Morning Set</span>Wenn ihr wach seid: Kissaten-ähnliches Morning Set mit Toast, Ei, kleinem Salat und Kaffee. Alternativ wieder Konbini, damit ihr pünktlich im Museum seid.</div></div></li>
+   <li class="slot"><div class="time">08:00</div><div class="slotbody"><div class="slottext">Abfahrt.</div></div></li>
+   <li class="slot"><div class="time">09:00–12:00</div><div class="slotbody"><div class="slottext">National Museum of Nature and Science: Dinosaurier, Tiere, Naturgeschichte, Technik.</div><div class="slotlinks"><a class="link" href="https://www.kahaku.go.jp/english/" target="_blank" rel="noopener">National Museum of Nature and Science ↗</a></div></div></li>
+   <li class="slot"><div class="time">12:15–13:15</div><div class="slotbody"><div class="slottext">Mittagessen.</div></div></li>
+   <li class="slot"><div class="time">13:30–14:30</div><div class="slotbody"><div class="slottext">Ueno Park.</div><div class="slotlinks"><a class="link" href="https://www.kensetsu.metro.tokyo.lg.jp/jimusho/toubuk/ueno/en_index.html" target="_blank" rel="noopener">Ueno Park ↗</a></div></div></li>
+   <li class="slot"><div class="time">14:45–16:00</div><div class="slotbody"><div class="slottext">Ameyoko als Atmosphäre und Snack-Stopp, nicht als Einkaufsauftrag.</div></div></li>
+   <li class="slot"><div class="time">16:00–17:00</div><div class="slotbody"><div class="slottext">Rückfahrt.</div></div></li>
+  </ol>
+ </article>
+
+ <article class="day" data-date="2026-07-13">
   <button class="dayhead" aria-expanded="false"><span class="date">13.07.</span><span><b>Asakusa FIX</b><small>Sensō-ji, Capybara Café 11:00–12:30, Samurai Ninja Museum.</small></span><span class="chev">⌄</span></button>
-  <ol class="details"><li class="slot food"><div class="time">06:50–07:20</div><div class="slotbody"><div class="slottext"><span class="foodtag">Leichtes Frühstück</span>Nur leicht frühstücken: Sandwich, Obst, Getränk. In Asakusa gibt es später genug Snacks, aber vor dem Capybara Café sollte niemand hungrig sein.</div></div></li>
-<li class="slot"><div class="time">07:30</div><div class="slotbody"><div class="slottext">Abfahrt.</div></div></li>
-<li class="slot"><div class="time">08:30–10:00</div><div class="slotbody"><div class="slottext">Kaminarimon → Nakamise → Hōzōmon → Sensō-ji → kurze Seitenstraßen.</div><div class="slotlinks"><a class="link" href="https://www.senso-ji.jp/english/" target="_blank" rel="noopener">Sensō-ji ↗</a></div></div></li>
-<li class="slot"><div class="time">10:00–10:40</div><div class="slotbody"><div class="slottext">Langsam zum Café, Toilette und Getränkepuffer.</div></div></li>
-<li class="slot"><div class="time">11:00–12:30</div><div class="slotbody"><div class="slottext">Capybara Café – feste Reservierung.</div></div></li>
-<li class="slot"><div class="time">12:30–13:30</div><div class="slotbody"><div class="slottext">Unkompliziertes Mittagessen.</div></div></li>
-<li class="slot"><div class="time">14:00–15:15</div><div class="slotbody"><div class="slottext">Samurai Ninja Museum Tokyo; Basisticket mit Führung und Mitmachanteilen.</div><div class="slotlinks"><a class="link" href="https://samuraininjamuseum.com/" target="_blank" rel="noopener">Samurai Ninja Museum ↗</a></div></div></li>
-<li class="slot"><div class="time">ab 15:30</div><div class="slotbody"><div class="slottext">Je nach Energie: Rückfahrt oder 30–45 Minuten Sumida-Ufer. Kein Skytree-Zwang.</div></div></li></ol>
-</article>
-<article class="day" data-date="2026-07-14">
+  <ol class="details">
+   <li class="slot food"><div class="time">06:50–07:20</div><div class="slotbody"><div class="slottext"><span class="foodtag">Leichtes Frühstück</span>Nur leicht frühstücken: Sandwich, Obst, Getränk. In Asakusa gibt es später genug Snacks, aber vor dem Capybara Café sollte niemand hungrig sein.</div></div></li>
+   <li class="slot"><div class="time">07:30</div><div class="slotbody"><div class="slottext">Abfahrt.</div></div></li>
+   <li class="slot"><div class="time">08:30–10:00</div><div class="slotbody"><div class="slottext">Kaminarimon → Nakamise → Hōzōmon → Sensō-ji → kurze Seitenstraßen.</div><div class="slotlinks"><a class="link" href="https://www.senso-ji.jp/english/" target="_blank" rel="noopener">Sensō-ji ↗</a></div></div></li>
+   <li class="slot"><div class="time">10:00–10:40</div><div class="slotbody"><div class="slottext">Langsam zum Café, Toilette und Getränkepuffer.</div></div></li>
+   <li class="slot"><div class="time">11:00–12:30</div><div class="slotbody"><div class="slottext">Capybara Café – feste Reservierung.</div></div></li>
+   <li class="slot"><div class="time">12:30–13:30</div><div class="slotbody"><div class="slottext">Unkompliziertes Mittagessen.</div></div></li>
+   <li class="slot"><div class="time">14:00–15:15</div><div class="slotbody"><div class="slottext">Samurai Ninja Museum Tokyo; Basisticket mit Führung und Mitmachanteilen.</div><div class="slotlinks"><a class="link" href="https://samuraininjamuseum.com/" target="_blank" rel="noopener">Samurai Ninja Museum ↗</a></div></div></li>
+   <li class="slot"><div class="time">ab 15:30</div><div class="slotbody"><div class="slottext">Je nach Energie: Rückfahrt oder 30–45 Minuten Sumida-Ufer. Kein Skytree-Zwang.</div></div></li>
+  </ol>
+ </article>
+
+ <article class="day" data-date="2026-07-14">
   <button class="dayhead" aria-expanded="false"><span class="date">14.07.</span><span><b>Shinkansen + Hakone Golden Route</b><small>Shinagawa → Odawara im Shinkansen, danach Hakone-Rundroute.</small></span><span class="chev">⌄</span></button>
-  <ol class="details"><li class="slot food"><div class="time">06:00–06:15</div><div class="slotbody"><div class="slottext"><span class="foodtag">Ekiben/Station</span>Sehr frühes Frühstück: am Vorabend oder in Shinagawa kaufen. Empfehlung: Onigiri, Tamago Sando, Kaffee und für die Kinder etwas Süßes. Im Shinkansen nur kurz frühstücken, weil die Fahrt kurz ist.</div><div class="slotlinks"><a class="link" href="https://www.sej.co.jp/products/a/sandwich/" target="_blank" rel="noopener">Sandwiches ↗</a></div></div></li>
-<li class="slot"><div class="time">ca. 06:20</div><div class="slotbody"><div class="slottext">Riverside Omori verlassen.</div></div></li>
-<li class="slot"><div class="time">ca. 06:50</div><div class="slotbody"><div class="slottext">Shinagawa Station; Orientierung und Bahnsteigpuffer.</div></div></li>
-<li class="slot"><div class="time">ca. 07:00–07:30</div><div class="slotbody"><div class="slottext">Tōkaidō-Shinkansen Shinagawa → Odawara. Nur einen Zug wählen, der in Odawara hält.</div><div class="slotlinks"><a class="link" href="https://global.jr-central.co.jp/en/info/timetable/" target="_blank" rel="noopener">JR Central Fahrplan ↗</a><a class="link" href="https://global.jr-central.co.jp/en/onlinebooking/" target="_blank" rel="noopener">Tōkaidō-Shinkansen Buchung ↗</a></div></div></li>
-<li class="slot"><div class="time">ca. 07:30–07:50</div><div class="slotbody"><div class="slottext">Ankunft Odawara und Umstieg.</div></div></li>
-<li class="slot"><div class="time">ca. 08:00–08:20</div><div class="slotbody"><div class="slottext">Weiterfahrt Odawara → Hakone-Yumoto.</div><div class="slotlinks"><a class="link" href="https://www.hakonenavi.jp/international/en/" target="_blank" rel="noopener">Hakone Navi ↗</a></div></div></li>
-<li class="slot"><div class="time">ab ca. 08:30</div><div class="slotbody"><div class="slottext">Beginn der Hakone Golden Route.</div></div></li>
-<li class="slot"><div class="time">ca. 08:30–09:20</div><div class="slotbody"><div class="slottext">Hakone Tozan Railway nach Gōra.</div><div class="slotlinks"><a class="link" href="https://www.hakonenavi.jp/international/en/" target="_blank" rel="noopener">Hakone Navi ↗</a></div></div></li>
-<li class="slot"><div class="time">ca. 09:30–09:50</div><div class="slotbody"><div class="slottext">Cable Car nach Sōunzan.</div></div></li>
-<li class="slot"><div class="time">ca. 10:00–10:30</div><div class="slotbody"><div class="slottext">Ropeway Richtung Ōwakudani.</div><div class="slotlinks"><a class="link" href="https://odakyu-global.com/transport-guide/hakone-area-status/" target="_blank" rel="noopener">Hakone Verkehrsstatus ↗</a></div></div></li>
-<li class="slot"><div class="time">10:30–11:30</div><div class="slotbody"><div class="slottext">Ōwakudani: Vulkanlandschaft, schwarze Eier, Fuji bei guter Sicht.</div></div></li>
-<li class="slot"><div class="time">11:30–12:10</div><div class="slotbody"><div class="slottext">Ropeway nach Tōgendai.</div></div></li>
-<li class="slot"><div class="time">12:10–13:00</div><div class="slotbody"><div class="slottext">Schnelles Mittagessen.</div></div></li>
-<li class="slot"><div class="time">ca. 13:00–14:00</div><div class="slotbody"><div class="slottext">Hakone Sightseeing Cruise / Piratenschiff über den Ashi-See.</div><div class="slotlinks"><a class="link" href="https://www.hakonenavi.jp/international/en/discount_passes/free_pass" target="_blank" rel="noopener">Hakone Freepass ↗</a></div></div></li>
-<li class="slot"><div class="time">14:00–15:15</div><div class="slotbody"><div class="slottext">Seeufer; optional kurzer Hakone-Schrein-Bereich nur bei guter Energie.</div></div></li>
-<li class="slot"><div class="time">spätestens 15:30–16:00</div><div class="slotbody"><div class="slottext">Rückreise beginnen.</div></div></li>
-<li class="slot"><div class="time">Wetterregel</div><div class="slotbody"><div class="slottext">Bei Dauerregen, tiefen Wolken oder Ropeway-Störungen verschieben; 18.07. oder 20.07. als Puffer nutzen.</div><div class="slotlinks"><a class="link" href="https://odakyu-global.com/transport-guide/hakone-area-status/" target="_blank" rel="noopener">Hakone Verkehrsstatus ↗</a></div></div></li></ol>
-</article>
-<article class="day" data-date="2026-07-15">
+  <ol class="details">
+   <li class="slot food"><div class="time">06:00–06:15</div><div class="slotbody"><div class="slottext"><span class="foodtag">Ekiben/Station</span>Sehr frühes Frühstück: am Vorabend oder in Shinagawa kaufen. Empfehlung: Onigiri, Tamago Sando, Kaffee und für die Kinder etwas Süßes. Im Shinkansen nur kurz frühstücken, weil die Fahrt kurz ist.</div><div class="slotlinks"><a class="link" href="https://www.sej.co.jp/products/a/sandwich/" target="_blank" rel="noopener">Sandwiches ↗</a></div></div></li>
+   <li class="slot"><div class="time">ca. 06:20</div><div class="slotbody"><div class="slottext">Riverside Omori verlassen.</div></div></li>
+   <li class="slot"><div class="time">ca. 06:50</div><div class="slotbody"><div class="slottext">Shinagawa Station; Orientierung und Bahnsteigpuffer.</div></div></li>
+   <li class="slot"><div class="time">ca. 07:00–07:30</div><div class="slotbody"><div class="slottext">Tōkaidō-Shinkansen Shinagawa → Odawara. Nur einen Zug wählen, der in Odawara hält.</div><div class="slotlinks"><a class="link" href="https://global.jr-central.co.jp/en/info/timetable/" target="_blank" rel="noopener">JR Central Fahrplan ↗</a><a class="link" href="https://global.jr-central.co.jp/en/onlinebooking/" target="_blank" rel="noopener">Tōkaidō-Shinkansen Buchung ↗</a></div></div></li>
+   <li class="slot"><div class="time">ca. 07:30–07:50</div><div class="slotbody"><div class="slottext">Ankunft Odawara und Umstieg.</div></div></li>
+   <li class="slot"><div class="time">ca. 08:00–08:20</div><div class="slotbody"><div class="slottext">Weiterfahrt Odawara → Hakone-Yumoto.</div><div class="slotlinks"><a class="link" href="https://www.hakonenavi.jp/international/en/" target="_blank" rel="noopener">Hakone Navi ↗</a></div></div></li>
+   <li class="slot"><div class="time">ab ca. 08:30</div><div class="slotbody"><div class="slottext">Beginn der Hakone Golden Route.</div></div></li>
+   <li class="slot"><div class="time">ca. 08:30–09:20</div><div class="slotbody"><div class="slottext">Hakone Tozan Railway nach Gōra.</div><div class="slotlinks"><a class="link" href="https://www.hakonenavi.jp/international/en/" target="_blank" rel="noopener">Hakone Navi ↗</a></div></div></li>
+   <li class="slot"><div class="time">ca. 09:30–09:50</div><div class="slotbody"><div class="slottext">Cable Car nach Sōunzan.</div></div></li>
+   <li class="slot"><div class="time">ca. 10:00–10:30</div><div class="slotbody"><div class="slottext">Ropeway Richtung Ōwakudani.</div><div class="slotlinks"><a class="link" href="https://odakyu-global.com/transport-guide/hakone-area-status/" target="_blank" rel="noopener">Hakone Verkehrsstatus ↗</a></div></div></li>
+   <li class="slot"><div class="time">10:30–11:30</div><div class="slotbody"><div class="slottext">Ōwakudani: Vulkanlandschaft, schwarze Eier, Fuji bei guter Sicht.</div></div></li>
+   <li class="slot"><div class="time">11:30–12:10</div><div class="slotbody"><div class="slottext">Ropeway nach Tōgendai.</div></div></li>
+   <li class="slot"><div class="time">12:10–13:00</div><div class="slotbody"><div class="slottext">Schnelles Mittagessen.</div></div></li>
+   <li class="slot"><div class="time">ca. 13:00–14:00</div><div class="slotbody"><div class="slottext">Hakone Sightseeing Cruise / Piratenschiff über den Ashi-See.</div><div class="slotlinks"><a class="link" href="https://www.hakonenavi.jp/international/en/discount_passes/free_pass" target="_blank" rel="noopener">Hakone Freepass ↗</a></div></div></li>
+   <li class="slot"><div class="time">14:00–15:15</div><div class="slotbody"><div class="slottext">Seeufer; optional kurzer Hakone-Schrein-Bereich nur bei guter Energie.</div></div></li>
+   <li class="slot"><div class="time">spätestens 15:30–16:00</div><div class="slotbody"><div class="slottext">Rückreise beginnen.</div></div></li>
+   <li class="slot"><div class="time">Wetterregel</div><div class="slotbody"><div class="slottext">Bei Dauerregen, tiefen Wolken oder Ropeway-Störungen verschieben; 18.07. oder 20.07. als Puffer nutzen.</div><div class="slotlinks"><a class="link" href="https://odakyu-global.com/transport-guide/hakone-area-status/" target="_blank" rel="noopener">Hakone Verkehrsstatus ↗</a></div></div></li>
+  </ol>
+ </article>
+
+ <article class="day" data-date="2026-07-15">
   <button class="dayhead" aria-expanded="false"><span class="date">15.07.</span><span><b>teamLab Borderless + Azabudai Hills</b><small>Früher Slot, ca. 3 Stunden Borderless, danach Azabudai Hills.</small></span><span class="chev">⌄</span></button>
-  <ol class="details"><li class="slot food"><div class="time">06:45–07:15</div><div class="slotbody"><div class="slottext"><span class="foodtag">Vorab leicht</span>Frühstück zu Hause oder unterwegs: Joghurt/Obst plus Sandwich. Nicht zu viel, damit teamLab entspannt bleibt.</div></div></li>
-<li class="slot"><div class="time">Empfehlung</div><div class="slotbody"><div class="slottext">Frühes Zeitfenster buchen, idealerweise gegen 08:30 oder 09:00.</div><div class="slotlinks"><a class="link" href="https://www.teamlab.art/e/tokyo/" target="_blank" rel="noopener">teamLab Borderless ↗</a></div></div></li>
-<li class="slot"><div class="time">ca. 07:30–08:00</div><div class="slotbody"><div class="slottext">Abfahrt ab Riverside Omori; ausreichend Ankunftspuffer einplanen.</div></div></li>
-<li class="slot"><div class="time">ca. 08:30/09:00–12:00</div><div class="slotbody"><div class="slottext">teamLab Borderless: frei erkunden; etwa 3 Stunden reservieren.</div><div class="slotlinks"><a class="link" href="https://www.teamlab.art/e/tokyo/" target="_blank" rel="noopener">teamLab Borderless ↗</a></div></div></li>
-<li class="slot"><div class="time">12:00–13:00</div><div class="slotbody"><div class="slottext">Mittagessen in oder nahe Azabudai Hills.</div><div class="slotlinks"><a class="link" href="https://www.azabudai-hills.com/en/" target="_blank" rel="noopener">Azabudai Hills ↗</a></div></div></li>
-<li class="slot"><div class="time">13:00–15:00</div><div class="slotbody"><div class="slottext">Azabudai Hills entspannt erkunden; Aussicht, Architektur, Cafépause.</div><div class="slotlinks"><a class="link" href="https://www.azabudai-hills.com/en/" target="_blank" rel="noopener">Azabudai Hills ↗</a></div></div></li>
-<li class="slot"><div class="time">ca. 15:00–16:00</div><div class="slotbody"><div class="slottext">Rückreise oder früher Abbruch bei Müdigkeit.</div></div></li></ol>
-</article>
-<article class="day" data-date="2026-07-16">
+  <ol class="details">
+   <li class="slot food"><div class="time">06:45–07:15</div><div class="slotbody"><div class="slottext"><span class="foodtag">Vorab leicht</span>Frühstück zu Hause oder unterwegs: Joghurt/Obst plus Sandwich. Nicht zu viel, damit teamLab entspannt bleibt.</div></div></li>
+   <li class="slot"><div class="time">Empfehlung</div><div class="slotbody"><div class="slottext">Frühes Zeitfenster buchen, idealerweise gegen 08:30 oder 09:00.</div><div class="slotlinks"><a class="link" href="https://www.teamlab.art/e/tokyo/" target="_blank" rel="noopener">teamLab Borderless ↗</a></div></div></li>
+   <li class="slot"><div class="time">ca. 07:30–08:00</div><div class="slotbody"><div class="slottext">Abfahrt ab Riverside Omori; ausreichend Ankunftspuffer einplanen.</div></div></li>
+   <li class="slot"><div class="time">ca. 08:30/09:00–12:00</div><div class="slotbody"><div class="slottext">teamLab Borderless: frei erkunden; etwa 3 Stunden reservieren.</div><div class="slotlinks"><a class="link" href="https://www.teamlab.art/e/tokyo/" target="_blank" rel="noopener">teamLab Borderless ↗</a></div></div></li>
+   <li class="slot"><div class="time">12:00–13:00</div><div class="slotbody"><div class="slottext">Mittagessen in oder nahe Azabudai Hills.</div><div class="slotlinks"><a class="link" href="https://www.azabudai-hills.com/en/" target="_blank" rel="noopener">Azabudai Hills ↗</a></div></div></li>
+   <li class="slot"><div class="time">13:00–15:00</div><div class="slotbody"><div class="slottext">Azabudai Hills entspannt erkunden; Aussicht, Architektur, Cafépause.</div><div class="slotlinks"><a class="link" href="https://www.azabudai-hills.com/en/" target="_blank" rel="noopener">Azabudai Hills ↗</a></div></div></li>
+   <li class="slot"><div class="time">ca. 15:00–16:00</div><div class="slotbody"><div class="slottext">Rückreise oder früher Abbruch bei Müdigkeit.</div></div></li>
+  </ol>
+ </article>
+
+ <article class="day" data-date="2026-07-16">
   <button class="dayhead" aria-expanded="false"><span class="date">16.07.</span><span><b>Echter Ruhetag</b><small>Ausschlafen, Wäsche, lokales Essen, höchstens eine kleine Aktivität.</small></span><span class="chev">⌄</span></button>
-  <ol class="details"><li class="slot food"><div class="time">Vormittag</div><div class="slotbody"><div class="slottext"><span class="foodtag">Japanisch testen</span>Ruhetag-Frühstück: klassisch probieren, z. B. Reis, Misosuppe, Lachs/Makrele, Tamagoyaki, Nori und optional Natto. Danach langsam starten.</div><div class="slotlinks"><a class="link" href="https://www.japan.travel/en/guide/japanese-breakfast/" target="_blank" rel="noopener">Japanisches Frühstück ↗</a></div></div></li>
-<li class="slot"><div class="time">Mittag</div><div class="slotbody"><div class="slottext">Lokales Essen rund um Ōmori / Heiwajima.</div></div></li>
-<li class="slot"><div class="time">Nachmittag</div><div class="slotbody"><div class="slottext">Genau eine Option: Park, Aquarium, lokales Erlebnis oder Unterkunft.</div><div class="slotlinks"><a class="link" href="https://www.aquarium.gr.jp/en/" target="_blank" rel="noopener">Shinagawa Aquarium ↗</a></div></div></li>
-<li class="slot"><div class="time">Abend</div><div class="slotbody"><div class="slottext">Früh schlafen; kein versteckter Sightseeing-Marathon.</div></div></li></ol>
-</article>
-<article class="day" data-date="2026-07-17">
+  <ol class="details">
+   <li class="slot food"><div class="time">Vormittag</div><div class="slotbody"><div class="slottext"><span class="foodtag">Japanisch testen</span>Ruhetag-Frühstück: klassisch probieren, z. B. Reis, Misosuppe, Lachs/Makrele, Tamagoyaki, Nori und optional Natto. Danach langsam starten.</div><div class="slotlinks"><a class="link" href="https://www.japan.travel/en/guide/japanese-breakfast/" target="_blank" rel="noopener">Japanisches Frühstück ↗</a></div></div></li>
+   <li class="slot food"><div class="time">Mittag</div><div class="slotbody"><div class="slottext"><span class="foodtag">7-Eleven Lunch</span><b>Ruhetag-Probiermittag:</b> Bento-Box, Karaage-Bento, Curry mit Reis oder kalte Soba. Dazu Edamame/Salat und Getränke. Ideal, weil niemand ein Restaurant suchen muss.</div></div></li>
+   <li class="slot"><div class="time">Nachmittag</div><div class="slotbody"><div class="slottext">Genau eine Option: Park, Aquarium, lokales Erlebnis oder Unterkunft.</div><div class="slotlinks"><a class="link" href="https://www.aquarium.gr.jp/en/" target="_blank" rel="noopener">Shinagawa Aquarium ↗</a></div></div></li>
+   <li class="slot food"><div class="time">Abend</div><div class="slotbody"><div class="slottext"><span class="foodtag">7-Eleven Dinner</span><b>Hotel-Abendbuffet:</b> Ramen, Gyudon/Donburi, Hambāgu mit Reis, Gyoza, kleiner Salat und 2 Desserts zum Teilen. Früh schlafen; kein versteckter Sightseeing-Marathon.</div></div></li>
+  </ol>
+ </article>
+
+ <article class="day" data-date="2026-07-17">
   <button class="dayhead" aria-expanded="false"><span class="date">17.07.</span><span><b>Yokohama</b><small>Minato Mirai, Cup Noodles Museum, Hafen, Chinatown.</small></span><span class="chev">⌄</span></button>
-  <ol class="details"><li class="slot food"><div class="time">07:15–07:45</div><div class="slotbody"><div class="slottext"><span class="foodtag">Satt aber schnell</span>Konbini-Frühstück plus Getränk. Für Yokohama lohnt ein pünktlicher Start; lieber dort Zeit am Hafen gewinnen.</div></div></li>
-<li class="slot"><div class="time">08:00</div><div class="slotbody"><div class="slottext">Abfahrt.</div></div></li>
-<li class="slot"><div class="time">ca. 09:15</div><div class="slotbody"><div class="slottext">Minato Mirai.</div><div class="slotlinks"><a class="link" href="https://www.yokohamajapan.com/" target="_blank" rel="noopener">Yokohama Visitors Guide ↗</a></div></div></li>
-<li class="slot"><div class="time">10:00–12:30</div><div class="slotbody"><div class="slottext">Cup Noodles Museum; MY CUPNOODLES möglichst vorab planen.</div><div class="slotlinks"><a class="link" href="https://www.cupnoodles-museum.jp/en/yokohama/" target="_blank" rel="noopener">Cup Noodles Museum ↗</a><a class="link" href="https://www.cupnoodles-museum.jp/en/yokohama/attractions/mc-factory/" target="_blank" rel="noopener">MY CUPNOODLES Factory ↗</a></div></div></li>
-<li class="slot"><div class="time">12:30–13:30</div><div class="slotbody"><div class="slottext">Mittagessen.</div></div></li>
-<li class="slot"><div class="time">13:30–15:30</div><div class="slotbody"><div class="slottext">Hafen / Minato Mirai.</div><div class="slotlinks"><a class="link" href="https://www.yokohamajapan.com/" target="_blank" rel="noopener">Yokohama Visitors Guide ↗</a></div></div></li>
-<li class="slot"><div class="time">16:00–18:00</div><div class="slotbody"><div class="slottext">Yokohama Chinatown; vorher Restaurant festlegen oder Streetfood-orientiert bleiben.</div></div></li>
-<li class="slot"><div class="time">18:00</div><div class="slotbody"><div class="slottext">Rückfahrt.</div></div></li></ol>
-</article>
-<article class="day" data-date="2026-07-18">
+  <ol class="details">
+   <li class="slot food"><div class="time">07:15–07:45</div><div class="slotbody"><div class="slottext"><span class="foodtag">Satt aber schnell</span>Konbini-Frühstück plus Getränk. Für Yokohama lohnt ein pünktlicher Start; lieber dort Zeit am Hafen gewinnen.</div></div></li>
+   <li class="slot"><div class="time">08:00</div><div class="slotbody"><div class="slottext">Abfahrt.</div></div></li>
+   <li class="slot"><div class="time">ca. 09:15</div><div class="slotbody"><div class="slottext">Minato Mirai.</div><div class="slotlinks"><a class="link" href="https://www.yokohamajapan.com/" target="_blank" rel="noopener">Yokohama Visitors Guide ↗</a></div></div></li>
+   <li class="slot"><div class="time">10:00–12:30</div><div class="slotbody"><div class="slottext">Cup Noodles Museum; MY CUPNOODLES möglichst vorab planen.</div><div class="slotlinks"><a class="link" href="https://www.cupnoodles-museum.jp/en/yokohama/" target="_blank" rel="noopener">Cup Noodles Museum ↗</a><a class="link" href="https://www.cupnoodles-museum.jp/en/yokohama/attractions/mc-factory/" target="_blank" rel="noopener">MY CUPNOODLES Factory ↗</a></div></div></li>
+   <li class="slot"><div class="time">12:30–13:30</div><div class="slotbody"><div class="slottext">Mittagessen.</div></div></li>
+   <li class="slot"><div class="time">13:30–15:30</div><div class="slotbody"><div class="slottext">Hafen / Minato Mirai.</div><div class="slotlinks"><a class="link" href="https://www.yokohamajapan.com/" target="_blank" rel="noopener">Yokohama Visitors Guide ↗</a></div></div></li>
+   <li class="slot"><div class="time">16:00–18:00</div><div class="slotbody"><div class="slottext">Yokohama Chinatown; vorher Restaurant festlegen oder Streetfood-orientiert bleiben.</div></div></li>
+   <li class="slot"><div class="time">18:00</div><div class="slotbody"><div class="slottext">Rückfahrt.</div></div></li>
+  </ol>
+ </article>
+
+ <article class="day" data-date="2026-07-18">
   <button class="dayhead" aria-expanded="false"><span class="date">18.07.</span><span><b>Puffertag</b><small>Wetter-/Hakone-Puffer oder Erholung. Optional Kawagoe.</small></span><span class="chev">⌄</span></button>
-  <ol class="details"><li class="slot food"><div class="time">später Morgen</div><div class="slotbody"><div class="slottext"><span class="foodtag">Langsamer Start</span>Wenn kein Hakone-Ersatztag: spätes Café-Frühstück/Morning Set. Wenn Hakone nachgeholt wird: wieder frühes Konbini-/Bahnhofsfrühstück.</div></div></li>
-<li class="slot"><div class="time">Variante A</div><div class="slotbody"><div class="slottext">Puffer für Hakone bei schlechtem Wetter, verregnete Tage, Ausschlafen oder lokalen Familientag.</div></div></li>
-<li class="slot"><div class="time">Variante B</div><div class="slotbody"><div class="slottext">Kawagoe nur bei echter Ausflugslust: historische Lagerhausstraße, Glockenturm, Candy Alley.</div><div class="slotlinks"><a class="link" href="https://koedo.or.jp/en/" target="_blank" rel="noopener">Kawagoe Tourism ↗</a></div></div></li>
-<li class="slot"><div class="time">Entscheidung</div><div class="slotbody"><div class="slottext">Am Abend des 17.07. anhand Energie und Wetter.</div></div></li></ol>
-</article>
-<article class="day" data-date="2026-07-19">
+  <ol class="details">
+   <li class="slot food"><div class="time">später Morgen</div><div class="slotbody"><div class="slottext"><span class="foodtag">Langsamer Start</span>Wenn kein Hakone-Ersatztag: spätes Café-Frühstück/Morning Set. Wenn Hakone nachgeholt wird: wieder frühes Konbini-/Bahnhofsfrühstück.</div></div></li>
+   <li class="slot"><div class="time">Variante A</div><div class="slotbody"><div class="slottext">Puffer für Hakone bei schlechtem Wetter, verregnete Tage, Ausschlafen oder lokalen Familientag.</div></div></li>
+   <li class="slot"><div class="time">Variante B</div><div class="slotbody"><div class="slottext">Kawagoe nur bei echter Ausflugslust: historische Lagerhausstraße, Glockenturm, Candy Alley.</div><div class="slotlinks"><a class="link" href="https://koedo.or.jp/en/" target="_blank" rel="noopener">Kawagoe Tourism ↗</a></div></div></li>
+   <li class="slot"><div class="time">Entscheidung</div><div class="slotbody"><div class="slottext">Am Abend des 17.07. anhand Energie und Wetter.</div></div></li>
+  </ol>
+ </article>
+
+ <article class="day" data-date="2026-07-19">
   <button class="dayhead" aria-expanded="false"><span class="date">19.07.</span><span><b>Akihabara gezielt</b><small>Games, optional Retro, Gachapon/Arcade mit Budget.</small></span><span class="chev">⌄</span></button>
-  <ol class="details"><li class="slot food"><div class="time">09:00–09:30</div><div class="slotbody"><div class="slottext"><span class="foodtag">Später & entspannt</span>Toast-/Café-Frühstück oder Konbini. Gut geeignet für Melonpan, Pancake-Sandwich oder Tamago Sando, da der Tag erst um 10:00 startet.</div></div></li>
-<li class="slot"><div class="time">10:00–11:00</div><div class="slotbody"><div class="slottext">Mission 1: aktuelle Games – ein vorher gewählter großer Laden.</div><div class="slotlinks"><a class="link" href="https://visit-chiyoda.tokyo/app/en/area/akihabara/" target="_blank" rel="noopener">Akihabara Guide ↗</a></div></div></li>
-<li class="slot"><div class="time">11:15–12:15</div><div class="slotbody"><div class="slottext">Mission 2: Retro-Gaming – nur bei echtem Interesse.</div></div></li>
-<li class="slot"><div class="time">12:15–13:15</div><div class="slotbody"><div class="slottext">Mittagessen.</div></div></li>
-<li class="slot"><div class="time">13:30–14:30</div><div class="slotbody"><div class="slottext">Mission 3: Gachapon / Arcade; für Kinder vorher festes Budget setzen.</div></div></li>
-<li class="slot"><div class="time">15:00</div><div class="slotbody"><div class="slottext">Ende. Keine ziellose Suche durch ähnliche Läden.</div></div></li></ol>
-</article>
-<article class="day" data-date="2026-07-20">
+  <ol class="details">
+   <li class="slot food"><div class="time">09:00–09:30</div><div class="slotbody"><div class="slottext"><span class="foodtag">Später & entspannt</span>Toast-/Café-Frühstück oder Konbini. Gut geeignet für Melonpan, Pancake-Sandwich oder Tamago Sando, da der Tag erst um 10:00 startet.</div></div></li>
+   <li class="slot"><div class="time">10:00–11:00</div><div class="slotbody"><div class="slottext">Mission 1: aktuelle Games – ein vorher gewählter großer Laden.</div><div class="slotlinks"><a class="link" href="https://visit-chiyoda.tokyo/app/en/area/akihabara/" target="_blank" rel="noopener">Akihabara Guide ↗</a></div></div></li>
+   <li class="slot"><div class="time">11:15–12:15</div><div class="slotbody"><div class="slottext">Mission 2: Retro-Gaming – nur bei echtem Interesse.</div></div></li>
+   <li class="slot"><div class="time">12:15–13:15</div><div class="slotbody"><div class="slottext">Mittagessen.</div></div></li>
+   <li class="slot"><div class="time">13:30–14:30</div><div class="slotbody"><div class="slottext">Mission 3: Gachapon / Arcade; für Kinder vorher festes Budget setzen.</div></div></li>
+   <li class="slot"><div class="time">15:00</div><div class="slotbody"><div class="slottext">Ende. Keine ziellose Suche durch ähnliche Läden.</div></div></li>
+  </ol>
+ </article>
+
+ <article class="day" data-date="2026-07-20">
   <button class="dayhead" aria-expanded="false"><span class="date">20.07.</span><span><b>Marine Day</b><small>Flexibel: Tokyo Bay, Park, Lieblingsviertel oder Hakone-Ersatztag.</small></span><span class="chev">⌄</span></button>
-  <ol class="details"><li class="slot food"><div class="time">09:00–10:00</div><div class="slotbody"><div class="slottext"><span class="foodtag">Feiertagsflexibel</span>Später Start mit Frühstück nach Lust: Café, Bäckerei oder 7-Eleven. Heute ist ein guter Tag für ein kleines Frühstücks-„Ranking“: bestes Onigiri, bestes Sandwich, bester süßer Snack.</div></div></li>
-<li class="slot"><div class="time">Start</div><div class="slotbody"><div class="slottext">Später Start gegen 10:00.</div></div></li>
-<li class="slot"><div class="time">Je nach Wetter</div><div class="slotbody"><div class="slottext">Tokyo Bay, Park, Lieblingsviertel wiederholen, Indoor-Aktivität oder kleiner Shopping-Nachholbedarf.</div><div class="slotlinks"><a class="link" href="https://www.gotokyo.org/en/" target="_blank" rel="noopener">Tokyo Official Travel Guide ↗</a></div></div></li>
-<li class="slot"><div class="time">Pufferfunktion</div><div class="slotbody"><div class="slottext">Zweiter möglicher Hakone-Ersatztag, falls nötig.</div></div></li>
-<li class="slot"><div class="time">Nicht geplant</div><div class="slotbody"><div class="slottext">Keine kritische Hauptattraktion mit spontaner Ticketabhängigkeit.</div></div></li></ol>
-</article>
-<article class="day" data-date="2026-07-21">
+  <ol class="details">
+   <li class="slot food"><div class="time">09:00–10:00</div><div class="slotbody"><div class="slottext"><span class="foodtag">Feiertagsflexibel</span>Später Start mit Frühstück nach Lust: Café, Bäckerei oder 7-Eleven. Heute ist ein guter Tag für ein kleines Frühstücks-„Ranking“: bestes Onigiri, bestes Sandwich, bester süßer Snack.</div></div></li>
+   <li class="slot"><div class="time">Start</div><div class="slotbody"><div class="slottext">Später Start gegen 10:00.</div></div></li>
+   <li class="slot"><div class="time">Je nach Wetter</div><div class="slotbody"><div class="slottext">Tokyo Bay, Park, Lieblingsviertel wiederholen, Indoor-Aktivität oder kleiner Shopping-Nachholbedarf.</div><div class="slotlinks"><a class="link" href="https://www.gotokyo.org/en/" target="_blank" rel="noopener">Tokyo Official Travel Guide ↗</a></div></div></li>
+   <li class="slot"><div class="time">Pufferfunktion</div><div class="slotbody"><div class="slottext">Zweiter möglicher Hakone-Ersatztag, falls nötig.</div></div></li>
+   <li class="slot"><div class="time">Nicht geplant</div><div class="slotbody"><div class="slottext">Keine kritische Hauptattraktion mit spontaner Ticketabhängigkeit.</div></div></li>
+  </ol>
+ </article>
+
+ <article class="day" data-date="2026-07-21">
   <button class="dayhead" aria-expanded="false"><span class="date">21.07.</span><span><b>Tokyo Station + Abschluss</b><small>Character Street, Souvenirs, packen.</small></span><span class="chev">⌄</span></button>
-  <ol class="details"><li class="slot food"><div class="time">08:15–08:45</div><div class="slotbody"><div class="slottext"><span class="foodtag">Letztes Wunschfrühstück</span>Noch einmal das bisherige Lieblingsfrühstück: Onigiri, Tamago Sando, japanische Bäckerei oder klassisches Café-Set. Danach nicht mehr experimentieren, damit der Packtag ruhig bleibt.</div></div></li>
-<li class="slot"><div class="time">09:00</div><div class="slotbody"><div class="slottext">Langsam starten.</div></div></li>
-<li class="slot"><div class="time">10:00–12:00</div><div class="slotbody"><div class="slottext">Tokyo Station Character Street; Wunschkategorien vorher festlegen, maximal 2 Stunden.</div><div class="slotlinks"><a class="link" href="https://www.tokyoeki-1bangai.co.jp/en/" target="_blank" rel="noopener">Tokyo Character Street ↗</a></div></div></li>
-<li class="slot"><div class="time">12:00–13:00</div><div class="slotbody"><div class="slottext">Mittagessen.</div></div></li>
-<li class="slot"><div class="time">13:00–14:00</div><div class="slotbody"><div class="slottext">Letzter konkreter Einkauf.</div></div></li>
-<li class="slot"><div class="time">spätestens 15:00</div><div class="slotbody"><div class="slottext">Zurück zur Unterkunft; Koffer packen, Handgepäck, Souvenirs verteilen.</div></div></li>
-<li class="slot"><div class="time">Abend</div><div class="slotbody"><div class="slottext">Früh essen; keine große letzte Abendtour.</div></div></li></ol>
-</article>
-<article class="day" data-date="2026-07-22">
+  <ol class="details">
+   <li class="slot food"><div class="time">08:15–08:45</div><div class="slotbody"><div class="slottext"><span class="foodtag">Letztes Wunschfrühstück</span>Noch einmal das bisherige Lieblingsfrühstück: Onigiri, Tamago Sando, japanische Bäckerei oder klassisches Café-Set. Danach nicht mehr experimentieren, damit der Packtag ruhig bleibt.</div></div></li>
+   <li class="slot"><div class="time">09:00</div><div class="slotbody"><div class="slottext">Langsam starten.</div></div></li>
+   <li class="slot"><div class="time">10:00–12:00</div><div class="slotbody"><div class="slottext">Tokyo Station Character Street; Wunschkategorien vorher festlegen, maximal 2 Stunden.</div><div class="slotlinks"><a class="link" href="https://www.tokyoeki-1bangai.co.jp/en/" target="_blank" rel="noopener">Tokyo Character Street ↗</a></div></div></li>
+   <li class="slot"><div class="time">12:00–13:00</div><div class="slotbody"><div class="slottext">Mittagessen.</div></div></li>
+   <li class="slot"><div class="time">13:00–14:00</div><div class="slotbody"><div class="slottext">Letzter konkreter Einkauf.</div></div></li>
+   <li class="slot"><div class="time">spätestens 15:00</div><div class="slotbody"><div class="slottext">Zurück zur Unterkunft; Koffer packen, Handgepäck, Souvenirs verteilen.</div></div></li>
+   <li class="slot"><div class="time">Abend</div><div class="slotbody"><div class="slottext">Früh essen; keine große letzte Abendtour.</div></div></li>
+  </ol>
+ </article>
+
+ <article class="day" data-date="2026-07-22">
   <button class="dayhead" aria-expanded="false"><span class="date">22.07.</span><span><b>Abflug</b><small>Riverside Omori → Haneda. Keine weiteren Programmpunkte.</small></span><span class="chev">⌄</span></button>
-  <ol class="details"><li class="slot food"><div class="time">Morgens</div><div class="slotbody"><div class="slottext"><span class="foodtag">Abflugtag</span>Einfaches Frühstück aus Vorräten oder Konbini: nichts Klebriges, nichts Experimentelles. Getränke erst nach Security neu kaufen.</div></div></li>
-<li class="slot"><div class="time">Danach</div><div class="slotbody"><div class="slottext">Direkt zum Haneda Airport; kein weiteres Programm.</div><div class="slotlinks"><a class="link" href="https://tokyo-haneda.com/en/" target="_blank" rel="noopener">Haneda Airport ↗</a></div></div></li></ol>
-</article>
-<section class="day open">
-  <button class="dayhead" aria-expanded="true"><span class="date">🍙</span><span><b>Frühstücks-Merkliste</b><small>Was ihr unbedingt testen solltet.</small></span><span class="chev">⌄</span></button>
+  <ol class="details">
+   <li class="slot food"><div class="time">Morgens</div><div class="slotbody"><div class="slottext"><span class="foodtag">Abflugtag</span>Einfaches Frühstück aus Vorräten oder Konbini: nichts Klebriges, nichts Experimentelles. Getränke erst nach Security neu kaufen.</div></div></li>
+   <li class="slot"><div class="time">Danach</div><div class="slotbody"><div class="slottext">Direkt zum Haneda Airport; kein weiteres Programm.</div><div class="slotlinks"><a class="link" href="https://tokyo-haneda.com/en/" target="_blank" rel="noopener">Haneda Airport ↗</a></div></div></li>
+  </ol>
+ </article>
+
+ <section class="day open">
+  <button class="dayhead" aria-expanded="true"><span class="date"></span><span><b>7-Eleven-Food-Guide</b><small>Frühstück, Mittagessen, Abendessen und Probierideen.</small></span><span class="chev">⌄</span></button>
   <div class="details">
-    <div class="photo-grid">
-      <div class="photo-card p1"><span>Onigiri: Lachs, Thunfisch-Mayo, Kombu</span></div>
-      <div class="photo-card p2"><span>Tamago Sando: weiches Eiersandwich</span></div>
-      <div class="photo-card p3"><span>Japanisch: Reis, Miso, Fisch, Ei</span></div>
-      <div class="photo-card p4"><span>Kissaten: Toast, Ei, Kaffee</span></div>
-    </div>
-    <p class="note">Familienregel: an Konbini-Tagen darf jeder ein sicheres Teil und ein neues Probierteil wählen. Preisniveau grob: Konbini günstig, Café mittel, Hotel/Ryokan eher teuer.</p>
+   <div class="slot food"><div class="time">Frühstück</div><div class="slotbody"><div class="slottext"><span class="foodtag">Must try</span>Onigiri: Lachs, Thunfisch-Mayo oder Kombu. Tamago Sando als weiches Eiersandwich. Dazu Joghurt, Banane, Smoothie, Kaffee oder Milch.</div><div class="slotlinks"><a class="link" href="https://www.sej.co.jp/products/a/onigiri/" target="_blank" rel="noopener">Onigiri ↗</a><a class="link" href="https://www.sej.co.jp/products/a/sandwich/" target="_blank" rel="noopener">Sandwiches ↗</a></div></div></div>
+   <div class="slot food"><div class="time">Mittag</div><div class="slotbody"><div class="slottext"><span class="foodtag">Lunch</span>Bento-Box mit Reis und Fleisch/Fisch, Karaage- oder Chicken-Bento, Curry mit Reis, Soba/Udon oder Pasta aus dem Kühlregal. Familienkombination: 2 Onigiri, 1 Sandwich, 1 warmes Chicken-Produkt, Edamame/Salat und ein Dessert.</div><div class="slotlinks"><a class="link" href="https://www.sej.co.jp/products/a/daily/" target="_blank" rel="noopener">Tagesgerichte ↗</a><a class="link" href="https://www.sej.co.jp/products/" target="_blank" rel="noopener">7-Eleven Produkte ↗</a></div></div></div>
+   <div class="slot food"><div class="time">Abend</div><div class="slotbody"><div class="slottext"><span class="foodtag">Dinner</span>Für einen entspannten Hotelabend: gekühlte Ramen, Gyudon/Donburi, Hambāgu mit Reis, Gyoza, Oden falls saisonal verfügbar, kleiner Salat und 2 Desserts zum Teilen.</div></div></div>
+   <div class="photo-grid">
+    <div class="photo-card p1"><span>Onigiri: Lachs, Thunfisch-Mayo, Kombu</span></div>
+    <div class="photo-card p2"><span>Tamago Sando: weiches Eiersandwich</span></div>
+    <div class="photo-card p5"><span>Bento: Reis, Fleisch/Fisch, Beilagen</span></div>
+    <div class="photo-card p6"><span>Karaage / Chicken-Bento</span></div>
+    <div class="photo-card p7"><span>Japanisches Curry mit Reis</span></div>
+    <div class="photo-card p8"><span>Udon, Soba oder Ramen</span></div>
+    <div class="photo-card p9"><span>Gyoza plus Salat oder Edamame</span></div>
+    <div class="photo-card p4"><span>Kaffee, Smoothie, Dessert</span></div>
+   </div>
+   <p class="note">Familienregel: an Konbini-Tagen darf jeder ein sicheres Teil und ein neues Probierteil wählen. Besonders gut eignen sich der 08.07. und 16.07. für ein bewusstes 7-Eleven-Mittagessen oder Abendbuffet. Das Sortiment variiert je nach Filiale, Region und Saison.</p>
   </div>
-</section>
-  <p class="note">Tipp: In Safari öffnen, Teilen-Symbol antippen und „Zum Home-Bildschirm“ wählen.</p>
+ </section>
+
+ <p class="note">Tipp: In Safari öffnen, Teilen-Symbol antippen und „Zum Home-Bildschirm“ wählen.</p>
 </main>
+
 <script>
 const ds=[...document.querySelectorAll('.day')];
 ds.forEach(d=>d.querySelector('.dayhead').onclick=()=>{
-  d.classList.toggle('open');
-  d.querySelector('.dayhead').setAttribute('aria-expanded', d.classList.contains('open'));
+ d.classList.toggle('open');
+ d.querySelector('.dayhead').setAttribute('aria-expanded', d.classList.contains('open'));
 });
 function localKey(){
  const now=new Date();
