@@ -1,259 +1,220 @@
 <!doctype html>
-<html lang="de">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<meta name="theme-color" content="#b3262e">
-<meta name="apple-mobile-web-app-capable" content="yes">
-<meta name="apple-mobile-web-app-title" content="Japan Plan">
-<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-<title>Japan Reiseplan 2026</title>
+<html lang="de"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#b3262e"><meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Japan Plan"><title>Japan Reiseplan 2026</title><link rel="manifest" href="./manifest.webmanifest"><link rel="apple-touch-icon" href="./icon.svg">
 <style>
-:root{--red:#b3262e;--ink:#172026;--paper:#f6f2e9;--card:#fff;--muted:#657078;--line:#eaded0;--soft:#f0f3f4;--green:#2f6b45;--gold:#c58a1a}
-*{box-sizing:border-box}
-html{scroll-behavior:smooth}
-body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;background:var(--paper);color:var(--ink);line-height:1.45}
-header{position:sticky;top:0;z-index:5;background:rgba(179,38,46,.96);color:white;padding:14px 16px;box-shadow:0 2px 10px rgba(0,0,0,.14)}
-header h1{margin:0;font-size:1.25rem}
-header p{margin:.2rem 0 0;font-size:.9rem;opacity:.92}
-.toolbar{display:flex;gap:8px;flex-wrap:wrap;margin-top:10px}
-.toolbar button,.toolbar a{border:1px solid rgba(255,255,255,.55);background:rgba(255,255,255,.14);color:#fff;border-radius:999px;padding:7px 10px;text-decoration:none;font-weight:650;font-size:.85rem}
-main{max-width:920px;margin:0 auto;padding:16px 12px 60px}
-.note{background:#fff4d9;border:1px solid #f0ce82;border-radius:14px;padding:12px 14px;margin:12px 0;color:#49320b}
-.summary{display:grid;grid-template-columns:repeat(auto-fit,minmax(145px,1fr));gap:10px;margin:12px 0 18px}
-.pill{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:10px;box-shadow:0 1px 4px rgba(0,0,0,.04)}
-.pill b{display:block;color:var(--red)}
-.day{background:var(--card);border:1px solid var(--line);border-radius:18px;margin:12px 0;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,.045)}
-.day summary{cursor:pointer;list-style:none;padding:14px 14px 12px;display:grid;grid-template-columns:auto 1fr auto;gap:10px;align-items:center}
-.day summary::-webkit-details-marker{display:none}
-.date{background:var(--red);color:white;border-radius:12px;padding:7px 8px;font-weight:800;font-size:.86rem;min-width:58px;text-align:center}
-.title{font-weight:850;font-size:1.02rem}
-.subtitle{display:block;color:var(--muted);font-weight:500;font-size:.9rem;margin-top:2px}
-.chev{color:var(--muted)}
-.content{border-top:1px solid var(--line);padding:10px 14px 14px}
-.item{display:grid;grid-template-columns:92px 1fr;gap:10px;padding:10px 0;border-bottom:1px dashed var(--line)}
-.item:last-child{border-bottom:0}
-.time{font-weight:800;color:var(--green);font-variant-numeric:tabular-nums}
-.item h3{margin:0 0 3px;font-size:1rem}
-.item p{margin:0;color:#2b3338}
-.tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:7px}
-.tag{font-size:.78rem;background:var(--soft);border:1px solid #dce3e5;border-radius:999px;padding:3px 7px}
-.food{background:#fff8ec;border-color:#f1d09a}
-.book{background:#eef7ff;border-color:#bddcf6}
-.move{background:#edf8ef;border-color:#bfe0c8}
-.warn{background:#fff0f0;border-color:#f1c3c3}
-.cost{background:#f7f0ff;border-color:#d8c5ef}
-a{color:#0b65b9;text-decoration:none}
-a:hover{text-decoration:underline}
-.section-title{margin:24px 0 8px;font-size:1.15rem}
-.checklist li{margin:6px 0}
-.small{font-size:.88rem;color:var(--muted)}
-.today{outline:3px solid #f0c24b}
-.fare-table{width:100%;border-collapse:collapse;margin:8px 0 2px;font-size:.9rem}
-.fare-table th,.fare-table td{padding:7px 6px;border-bottom:1px solid var(--line);text-align:left}
-.fare-table th{color:var(--muted);font-size:.8rem}
-.fare-table td:nth-child(n+2),.fare-table th:nth-child(n+2){text-align:right;white-space:nowrap}
-.fare-total{font-weight:800}
-@media(max-width:560px){.item{grid-template-columns:1fr}.time{margin-bottom:-4px}.day summary{grid-template-columns:1fr auto}.date{grid-row:1}.title{grid-column:1/3}.subtitle{font-size:.86rem}.fare-table{font-size:.82rem}}
-@media print{header,.toolbar{position:static}.day{break-inside:avoid}.day:not([open]) .content{display:block}body{background:white}main{max-width:none}.chev{display:none}}
+:root{--red:#b3262e;--ink:#172026;--paper:#f6f2e9;--card:#fff;--muted:#657078;--line:#eaded0;--soft:#f0f3f4;--green:#2f6b45}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;background:var(--paper);color:var(--ink);line-height:1.45}
+header{position:sticky;top:0;z-index:5;background:rgba(179,38,46,.96);color:#fff;padding:14px 16px;box-shadow:0 2px 10px #0002}header h1{margin:0;font-size:1.25rem}header p{margin:.2rem 0 0;font-size:.9rem;opacity:.92}
+.toolbar{display:flex;gap:8px;flex-wrap:wrap;margin-top:10px}.toolbar button,.toolbar a{border:1px solid #ffffff88;background:#ffffff22;color:#fff;border-radius:999px;padding:7px 10px;text-decoration:none;font-weight:650}
+main{max-width:920px;margin:auto;padding:16px 12px 60px}.note{background:#fff4d9;border:1px solid #f0ce82;border-radius:14px;padding:12px 14px;margin:12px 0;color:#49320b}
+.summary{display:grid;grid-template-columns:repeat(auto-fit,minmax(145px,1fr));gap:10px;margin:12px 0 18px}.pill{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:10px}.pill b{display:block;color:var(--red)}
+.day{background:var(--card);border:1px solid var(--line);border-radius:18px;margin:12px 0;overflow:hidden;box-shadow:0 2px 8px #0000000b}.day summary{cursor:pointer;list-style:none;padding:14px;display:grid;grid-template-columns:auto 1fr auto;gap:10px;align-items:center}.day summary::-webkit-details-marker{display:none}
+.date{background:var(--red);color:#fff;border-radius:12px;padding:7px 8px;font-weight:800;min-width:58px;text-align:center}.title{font-weight:850}.subtitle{display:block;color:var(--muted);font-weight:500;font-size:.9rem;margin-top:2px}.chev{color:var(--muted)}
+.content{border-top:1px solid var(--line);padding:10px 14px 14px}.item{display:grid;grid-template-columns:112px 1fr;gap:10px;padding:10px 0;border-bottom:1px dashed var(--line)}.item:last-child{border-bottom:0}.time{font-weight:800;color:var(--green)}.item h3{margin:0 0 3px;font-size:1rem}.item p{margin:0;color:#2b3338}.tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:7px}.tag{font-size:.78rem;background:var(--soft);border:1px solid #dce3e5;border-radius:999px;padding:3px 7px}.book{background:#eef7ff}.cost{background:#f7f0ff}a{color:#0b65b9;text-decoration:none}.today{outline:3px solid #f0c24b}
+.status{display:inline-block;border-radius:999px;padding:3px 8px;font-size:.75rem;font-weight:800;margin-left:6px}
+.done{background:#e9f7ed;color:#23653b}.now{background:#fff1bd;color:#704f00}.next{background:#edf1f4;color:#52616a}
+.utility{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:8px;margin:10px 0}
+.utility-card{background:#fafafa;border:1px solid var(--line);border-radius:13px;padding:10px}
+.utility-card b{display:block;color:var(--red);margin-bottom:3px}
+.routebox{border:1px solid #cfe0e8;background:#f4fbff;border-radius:14px;padding:11px;margin:9px 0}
+.alert{border:1px solid #efc3c3;background:#fff4f4;border-radius:14px;padding:11px;margin:9px 0}
+.good{border:1px solid #bedec6;background:#f1faf3;border-radius:14px;padding:11px;margin:9px 0}
+.fare-table{width:100%;border-collapse:collapse;margin-top:8px}.fare-table th,.fare-table td{padding:7px;border-bottom:1px solid var(--line);text-align:left}.fare-table td:last-child,.fare-table th:last-child{text-align:right}
+@media(max-width:560px){.item{grid-template-columns:1fr}.day summary{grid-template-columns:1fr auto}.date{grid-row:1}.title{grid-column:1/3}}
 </style>
 <script>
 function openAll(){document.querySelectorAll('details.day').forEach(d=>d.open=true)}
 function closeAll(){document.querySelectorAll('details.day').forEach(d=>d.open=false)}
-function showToday(){
-  const t=new Date();
-  const id='d'+String(t.getDate()).padStart(2,'0')+'07';
-  const el=document.getElementById(id);
-  if(el){
-    document.querySelectorAll('.today').forEach(x=>x.classList.remove('today'));
-    el.open=true;
-    el.scrollIntoView({behavior:'smooth',block:'start'});
-    el.classList.add('today');
-  }
-}
-</script>
-</head>
-<body>
-<header>
-  <h1>Japan Reiseplan 2026</h1>
-  <p>Tokyo · 7.–22. Juli 2026 · Riverside Omori · Familienplan</p>
-  <div class="toolbar">
-    <button onclick="showToday()">Heute anzeigen</button>
-    <button onclick="openAll()">Alle öffnen</button>
-    <button onclick="closeAll()">Alle schließen</button>
-    <a href="#buchungen">Buchungen</a>
-    <a href="#essen">Essen-Fixpunkte</a>
-  </div>
-</header>
-
+function showToday(){const t=new Date(),id='d'+String(t.getDate()).padStart(2,'0')+'07',el=document.getElementById(id);if(el){document.querySelectorAll('.today').forEach(x=>x.classList.remove('today'));el.open=true;el.classList.add('today');el.scrollIntoView({behavior:'smooth',block:'start'})}}
+</script></head>
+<body><header><h1>Japan Reiseplan 2026</h1><p>Tokyo · 7.–22. Juli 2026 · Riverside Omori</p><div class="toolbar"><button onclick="showToday()">Heute anzeigen</button><button onclick="openAll()">Alle öffnen</button><button onclick="closeAll()">Alle schließen</button><a href="#d1407">Hakone heute</a><a href="#hakone-kompakt">Hakone kompakt</a></div></header>
 <main>
-<div class="note"><b>Aktualisiert am 12.07.2026:</b> Heute entfallen Naturkundemuseum und Ueno. Stattdessen: Kaiserpalast und Akihabara. Kamakura wird am 17.07. nachgeholt; der Ueno-Museumstag wandert auf den 18.07.</div>
+<div class="note"><b>Aktualisiert am 14.07.2026:</b> Version 5: Der heutige Hakone-Tag vereint alle bisherigen Angaben mit Buchungsdaten, Kartenlinks, Toiletten, Essen, Fotospots, Kinderhinweisen, Kosten, Schlechtwetter-Alternativen und Rückfahrt.</div>
+<div class="summary"><div class="pill"><b>Heute</b>Shinkansen + Hakone</div><div class="pill"><b>Gebucht</b>HIKARI 633 · 07:43–08:09</div><div class="pill"><b>Sitze</b>Wagen 12 · 5D/E + 6D/E</div><div class="pill"><b>Preis</b>9.680 ¥</div><div class="pill"><b>Route</b>Gōra → Ōwakudani → Ashi-See</div><div class="pill"><b>Wichtig</b>Live-Status prüfen</div></div>
+<details class="day" id="d0707"><summary><span class="date">07.07.</span><span class="title">Ankunft in Tokyo Haneda <span class="status done">✔️ Erledigt</span><span class="subtitle">Haneda → Riverside Omori. Ankommen, Konbini, schlafen.</span></span><span class="chev">⌄</span></summary><div class="content"><div class="item"><div class="time">Plan</div><div><h3>Ankunft in Tokyo Haneda</h3><p>Haneda → Riverside Omori. Ankommen, Konbini, schlafen.</p></div></div></div></details>
+<details class="day" id="d0807"><summary><span class="date">08.07.</span><span class="title">Sanfter Einstieg Ōmori/Shinagawa <span class="status done">✔️ Erledigt</span><span class="subtitle">Lokaler Start, Aquarium oder Park.</span></span><span class="chev">⌄</span></summary><div class="content"><div class="item"><div class="time">Plan</div><div><h3>Sanfter Einstieg Ōmori/Shinagawa</h3><p>Lokaler Start, Aquarium oder Park.</p></div></div></div></details>
+<details class="day" id="d0907"><summary><span class="date">09.07.</span><span class="title">Odaiba / DiverCity <span class="status done">✔️ Erledigt</span><span class="subtitle">Miraikan, Gundam und Waterfront.</span></span><span class="chev">⌄</span></summary><div class="content"><div class="item"><div class="time">Plan</div><div><h3>Odaiba / DiverCity</h3><p>Miraikan, Gundam und Waterfront.</p></div></div></div></details>
+<details class="day" id="d1007"><summary><span class="date">10.07.</span><span class="title">Meiji → Harajuku → Shibuya PARCO <span class="status done">✔️ Erledigt</span><span class="subtitle">Nintendo, Pokémon und Kaiten-Sushi.</span></span><span class="chev">⌄</span></summary><div class="content"><div class="item"><div class="time">Plan</div><div><h3>Meiji → Harajuku → Shibuya PARCO</h3><p>Nintendo, Pokémon und Kaiten-Sushi.</p></div></div></div></details>
+<details class="day" id="d1107"><summary><span class="date">11.07.</span><span class="title">Heiwajima + Shibuya-Einkaufstour <span class="status done">✔️ Erledigt</span><span class="subtitle">Peace Forest Park und gezielte Familienmode.</span></span><span class="chev">⌄</span></summary><div class="content"><div class="item"><div class="time">Plan</div><div><h3>Heiwajima + Shibuya-Einkaufstour</h3><p>Peace Forest Park und gezielte Familienmode.</p></div></div></div></details>
+<details class="day" id="d1207"><summary><span class="date">12.07.</span><span class="title">Kaiserpalast → Akihabara <span class="status done">✔️ Erledigt</span><span class="subtitle">East Gardens, Elektronik, Games und Gachapon.</span></span><span class="chev">⌄</span></summary><div class="content"><div class="item"><div class="time">Plan</div><div><h3>Kaiserpalast → Akihabara</h3><p>East Gardens, Elektronik, Games und Gachapon.</p></div></div></div></details>
+<details class="day" id="d1307"><summary><span class="date">13.07.</span><span class="title">Asakusa FIX <span class="status done">✔️ Erledigt</span><span class="subtitle">Sensō-ji, Capybara Café und Samurai Ninja Museum.</span></span><span class="chev">⌄</span></summary><div class="content"><div class="item"><div class="time">Plan</div><div><h3>Asakusa FIX</h3><p>Sensō-ji, Capybara Café und Samurai Ninja Museum.</p></div></div></div></details>
 
-<div class="summary">
-  <div class="pill"><b>Heute</b>Kaiserpalast + Akihabara</div>
-  <div class="pill"><b>Asakusa FIX</b>13.07. Capybara Café</div>
-  <div class="pill"><b>Shinkansen</b>14.07. Shinagawa → Odawara</div>
-  <div class="pill"><b>Tsukiji</b>16.07.</div>
-  <div class="pill"><b>Kamakura</b>17.07. Nachholtermin</div>
-  <div class="pill"><b>Ueno</b>18.07. Museum + Ramen</div>
-</div>
 
-<details class="day" id="d0707">
-<summary><span class="date">07.07.</span><span class="title">Ankunft in Tokyo Haneda<span class="subtitle">Haneda → Riverside Omori. Ankommen, Konbini, schlafen.</span></span><span class="chev">⌄</span></summary>
-<div class="content"><div class="item"><div class="time">Abends</div><div><h3>Ankunft</h3><p>Nach Immigration und Gepäck direkt zur Unterkunft. Kein Zusatzprogramm.</p></div></div></div>
-</details>
-
-<details class="day" id="d0807">
-<summary><span class="date">08.07.</span><span class="title">Sanfter Einstieg Ōmori/Shinagawa<span class="subtitle">Lokaler Start, optional Aquarium oder Park.</span></span><span class="chev">⌄</span></summary>
-<div class="content"><div class="item"><div class="time">10:00</div><div><h3>Shinagawa Aquarium oder Park</h3><p>Unkomplizierter Programmpunkt abhängig von Jetlag und Wetter.</p></div></div></div>
-</details>
-
-<details class="day" id="d0907">
-<summary><span class="date">09.07.</span><span class="title">Odaiba / DiverCity<span class="subtitle">Miraikan, Gundam und Waterfront.</span></span><span class="chev">⌄</span></summary>
-<div class="content"><div class="item"><div class="time">Tag</div><div><h3>Odaiba</h3><p>DiverCity, Unicorn Gundam und Waterfront.</p></div></div></div>
-</details>
-
-<details class="day" id="d1007">
-<summary><span class="date">10.07.</span><span class="title">Meiji → Harajuku → Shibuya PARCO<span class="subtitle">Nintendo, Pokémon und Kaiten-Sushi.</span></span><span class="chev">⌄</span></summary>
+<details class="day today" id="d1407" open>
+<summary>
+  <span class="date">14.07.</span>
+  <span class="title">Shinkansen + Hakone Golden Route <span class="status now">📍 Heute</span>
+    <span class="subtitle">Gebucht: HIKARI 633, Shinagawa 07:43 → Odawara 08:09. Danach komplette Golden Route.</span>
+  </span>
+  <span class="chev">⌄</span>
+</summary>
 <div class="content">
-  <div class="item"><div class="time">09:30–11:00</div><div><h3>Meiji Shrine</h3><p>Waldwege, Torii und ruhiger Start.</p></div></div>
-  <div class="item"><div class="time">13:00–16:30</div><div><h3>Shibuya PARCO</h3><p>Nintendo TOKYO und Pokémon Center.</p></div></div>
-  <div class="item"><div class="time">17:00–18:30</div><div><h3>Kaiten-Sushi</h3><p>Kanazawa Maimon Sushi; bei langer Schlange Uobei Shibuya Dogenzaka.</p></div></div>
+
+<div id="hakone-kompakt" class="utility">
+  <div class="utility-card"><b>🚄 Gebucht</b>HIKARI 633 · 07:43–08:09</div>
+  <div class="utility-card"><b>🪑 Sitze</b>Wagen 12 · 5D/E und 6D/E</div>
+  <div class="utility-card"><b>💴 Shinkansen</b>9.680 ¥ gesamt</div>
+  <div class="utility-card"><b>🗻 Fuji-Seite</b>D/E auf der Hinfahrt</div>
+  <div class="utility-card"><b>🎫 Vor Ort</b>Hakone Freepass ab Odawara prüfen</div>
+  <div class="utility-card"><b>⏱️ Rückreise</b>spätestens 15:30–16:00 starten</div>
+</div>
+
+<div class="routebox"><b>ÖPNV-Kette:</b><br>
+Riverside Omori → Shinagawa → <b>HIKARI 633</b> → Odawara → Hakone-Yumoto → Gōra → Sōunzan → Ōwakudani → Tōgendai → Ashi-See → Moto-Hakone/Hakone-machi → Odawara → Shinagawa.
+</div>
+
+<div class="item"><div class="time">Vorabend / 06:00</div><div>
+<h3>Vorbereitung</h3>
+<p>Snacks, Getränke, Sonnenschutz, Kopfbedeckungen, leichte Regensachen und Powerbank einpacken. Nur leichtes Gepäck mitnehmen.</p>
+<div class="tags"><span class="tag food">🥤 Getränke</span><span class="tag warn">🌦️ Wetter prüfen</span><span class="tag move">🎒 leichtes Gepäck</span></div>
+</div></div>
+
+<div class="item"><div class="time">06:15</div><div>
+<h3>Riverside Omori verlassen</h3>
+<p>Ziel ist Shinagawa Station. Aktuelle Verbindung in Apple Maps oder Google Maps prüfen, weil lokale Anschlüsse variieren können.</p>
+<div class="tags">
+<a class="tag" href="https://www.google.com/maps/search/?api=1&query=Shinagawa+Station" target="_blank">📍 Shinagawa Station ↗</a>
+</div>
+</div></div>
+
+<div class="item"><div class="time">spätestens 07:15</div><div>
+<h3>Shinkansen-Bereich in Shinagawa</h3>
+<p>Smart-EX-QR-Code beziehungsweise verknüpfte IC-Karte bereithalten. Bahnsteig auf der Anzeige prüfen. Vorher Toilette nutzen; danach direkt zum Wagen 12.</p>
+<div class="tags">
+<a class="tag" href="https://smart-ex.jp/en/" target="_blank">Smart EX ↗</a>
+<a class="tag" href="https://global.jr-central.co.jp/en/info/timetable/" target="_blank">JR-Fahrplan ↗</a>
+<span class="tag move">🚻 Toilette</span>
+</div>
+</div></div>
+
+<div class="item"><div class="time">07:43–08:09</div><div>
+<h3>HIKARI 633: Shinagawa → Odawara</h3>
+<p>N700S, Ordinary Car 12. Sitze 5D, 5E, 6D und 6E. Ihr sitzt als zwei Zweiergruppen direkt hintereinander. D/E sind auf der rechten Zugseite und damit bei klarer Sicht die bessere Fuji-Seite.</p>
+<table class="fare-table">
+<tr><th>Personen</th><th>Preis</th></tr>
+<tr><td>2 Erwachsene</td><td>6.460 ¥</td></tr>
+<tr><td>2 Kinder</td><td>3.220 ¥</td></tr>
+<tr><td><b>Gesamt</b></td><td><b>9.680 ¥</b></td></tr>
+</table>
+<div class="tags"><span class="tag book">✅ gebucht</span><span class="tag cost">💴 9.680 ¥</span><span class="tag">🗻 D/E Fuji-Seite</span></div>
+</div></div>
+
+<div class="item"><div class="time">08:09–08:35</div><div>
+<h3>Odawara: Freepass, Toilette und Umstieg</h3>
+<p>Nach Ankunft zunächst Toilette und Getränke. Danach Hakone Freepass ab Odawara kaufen beziehungsweise aktivieren und zur Hakone Tozan Line wechseln.</p>
+<div class="tags">
+<a class="tag" href="https://www.google.com/maps/search/?api=1&query=Odawara+Station" target="_blank">📍 Odawara Station ↗</a>
+<a class="tag" href="https://www.hakonenavi.jp/international/en/discount_passes/free_pass" target="_blank">Hakone Freepass ↗</a>
+<span class="tag move">🚻 Toilette</span><span class="tag food">🏪 Getränke/Snacks</span>
+</div>
+</div></div>
+
+<div class="item"><div class="time">ca. 08:35–09:00</div><div>
+<h3>Odawara → Hakone-Yumoto</h3>
+<p>Kurze Weiterfahrt. In Hakone-Yumoto direkt zur Bergbahn umsteigen. Bei großem Andrang nicht unnötig im Bahnhof stehen bleiben.</p>
+<div class="tags"><a class="tag" href="https://www.hakonenavi.jp/international/en/" target="_blank">Hakone Navi ↗</a></div>
+</div></div>
+
+<div class="item"><div class="time">ca. 09:00–09:50</div><div>
+<h3>Hakone Tozan Railway nach Gōra</h3>
+<p>Bergbahn mit Spitzkehren und starkem Höhengewinn. Für Kinder ist das bereits ein Highlight. Fensterplätze nutzen.</p>
+<div class="tags"><span class="tag">👦 Kinderhighlight</span><span class="tag">📸 Bergbahn</span></div>
+</div></div>
+
+<div class="item"><div class="time">ca. 10:00–10:20</div><div>
+<h3>Cable Car Gōra → Sōunzan</h3>
+<p>Kurzer Umstieg. In Sōunzan unbedingt Toilette, Wasser und gegebenenfalls einen Snack nutzen, bevor es in die Ropeway geht.</p>
+<div class="tags"><span class="tag move">🚻 Toilette</span><span class="tag food">🥤 Getränke</span></div>
+</div></div>
+
+<div class="item"><div class="time">ca. 10:30–11:00</div><div>
+<h3>Ropeway Sōunzan → Ōwakudani</h3>
+<p>Bei klarer Sicht gibt es Fuji-Blicke. Für Fotos möglichst nicht nur durch stark spiegelnde Scheiben fotografieren, sondern an den Stationen erneut versuchen.</p>
+<div class="tags">
+<a class="tag" href="https://www.hakonenavi.jp/international/en/status_information" target="_blank">Live-Status ↗</a>
+<span class="tag">🗻 Fuji-Fotospot</span><span class="tag">👦 Kinderhighlight</span>
+</div>
+</div></div>
+
+<div class="item"><div class="time">11:00–12:00</div><div>
+<h3>Ōwakudani</h3>
+<p>Vulkanlandschaft, Schwefeldämpfe und schwarze Eier. Beste Fotos: Aussichtsterrassen mit Vulkanhängen und bei klarer Sicht Fuji im Hintergrund. Bei Geruchsempfindlichkeit oder Atemwegsproblemen Aufenthalt kurz halten.</p>
+<div class="tags">
+<a class="tag" href="https://www.google.com/maps/search/?api=1&query=Owakudani" target="_blank">📍 Google Maps ↗</a>
+<a class="tag" href="https://www.hakonenavi.jp/international/en/spot/331" target="_blank">Ōwakudani Infos ↗</a>
+<span class="tag food">🥚 schwarze Eier</span><span class="tag move">🚻 Toilette</span>
+</div>
+<div class="alert"><b>⚠️ Sicherheit:</b> Bei vulkanischen Warnungen, Sperrungen oder Ropeway-Stopp sofort den Hinweisen des Personals folgen.</div>
+</div></div>
+
+<div class="item"><div class="time">12:00–12:40</div><div>
+<h3>Ropeway Ōwakudani → Tōgendai</h3>
+<p>Über Ubako hinunter zum Ashi-See. Bei schlechtem Wetter ist die Sicht eingeschränkt, die Fahrt bleibt für Kinder trotzdem interessant.</p>
+</div></div>
+
+<div class="item"><div class="time">12:40–13:20</div><div>
+<h3>Mittagessen in Tōgendai</h3>
+<p>Keine lange Restaurantsuche: Curry, Udon/Soba oder ein schnelles Café wählen. Bei Warteschlangen auf vorbereitete Onigiri/Sandwiches ausweichen, damit ihr das Schiff nicht verpasst.</p>
+<div class="tags">
+<a class="tag" href="https://www.google.com/maps/search/?api=1&query=restaurants+near+Togendai+Station" target="_blank">🍱 Restaurants Tōgendai ↗</a>
+<span class="tag warn">⏱️ Schiffszeit beachten</span><span class="tag move">🚻 Toilette</span>
+</div>
+</div></div>
+
+<div class="item"><div class="time">ca. 13:30–14:15</div><div>
+<h3>Hakone Sightseeing Cruise / Piratenschiff</h3>
+<p>Tōgendai → Hakone-machi oder Moto-Hakone gemäß Fahrplan. Für Fotos außen an Deck gehen, sofern Wetter und Sicherheit es zulassen. Fuji ist bei klarer Sicht über dem See sichtbar.</p>
+<div class="tags">
+<a class="tag" href="https://www.hakonenavi.jp/international/en/transportation/hakone-kankosen" target="_blank">Schiff/Fahrplan ↗</a>
+<a class="tag" href="https://www.google.com/maps/search/?api=1&query=Hakone+Sightseeing+Cruise+Togendai" target="_blank">📍 Anleger ↗</a>
+<span class="tag">📸 See/Fuji</span><span class="tag">👦 Piratenschiff</span>
+</div>
+</div></div>
+
+<div class="item"><div class="time">14:15–15:15</div><div>
+<h3>Moto-Hakone und optional Hakone-Schrein</h3>
+<p>Priorität hat das Seeufer. Den Hakone-Schrein nur ergänzen, wenn alle noch genug Energie haben. Die Schlange am Torii im Wasser nicht abwarten, falls sie lang ist.</p>
+<div class="tags">
+<a class="tag" href="https://www.google.com/maps/search/?api=1&query=Hakone+Shrine" target="_blank">📍 Hakone Shrine ↗</a>
+<a class="tag" href="https://www.google.com/maps/search/?api=1&query=restaurants+near+Moto-Hakone" target="_blank">☕ Essen/Cafés ↗</a>
+<span class="tag warn">🚶 zusätzliche Gehstrecke</span>
+</div>
+</div></div>
+
+<div class="item"><div class="time">spätestens 15:30–16:00</div><div>
+<h3>Rückfahrt beginnen</h3>
+<p>Bus nach Hakone-Yumoto oder direkt Richtung Odawara wählen. Nicht auf eine zu knappe Shinkansen-Rückfahrt festlegen, weil Busse verspätet sein können. In Odawara den nächsten passenden Hikari/Kodama oder Regionalzug wählen.</p>
+<div class="tags">
+<a class="tag" href="https://global.jr-central.co.jp/en/info/timetable/" target="_blank">JR-Rückfahrt ↗</a>
+<a class="tag" href="https://www.google.com/maps/dir/?api=1&origin=Moto-Hakone&destination=Odawara+Station&travelmode=transit" target="_blank">🚌 Route nach Odawara ↗</a>
+</div>
+</div></div>
+
+<div class="item"><div class="time">Schlechtwetter</div><div>
+<h3>Alternative bei Ropeway-/Schiffsausfall</h3>
+<p>Von Gōra beziehungsweise Hakone-Yumoto per Bus weiterfahren oder den Open-Air-Museum-Bereich als Indoor-/Halbindoor-Alternative nutzen. Bei starkem Wind und Komplettausfällen den Golden-Route-Anspruch aufgeben und früher zurückfahren.</p>
+<div class="tags">
+<a class="tag" href="https://www.hakonenavi.jp/international/en/status_information" target="_blank">Betriebsstatus ↗</a>
+<a class="tag" href="https://www.hakone-oam.or.jp/en/" target="_blank">Open-Air Museum ↗</a>
+</div>
+</div></div>
+
+<div class="good"><b>✅ Nicht verpassen:</b> Fuji-Seite D/E im Shinkansen, Spitzkehren der Bergbahn, schwarze Eier in Ōwakudani, Piratenschiff und der Blick über den Ashi-See.</div>
+<div class="alert"><b>⚠️ Nicht erzwingen:</b> lange Schlange am Torii, zusätzliche Museen, verspätete Rückfahrt oder vollständige Golden Route bei Betriebsstörungen.</div>
+
 </div>
 </details>
 
-<details class="day" id="d1107">
-<summary><span class="date">11.07.</span><span class="title">Heiwajima + Shibuya-Einkaufstour<span class="subtitle">Peace Forest Park, anschließend günstige und stylishe Familienmode.</span></span><span class="chev">⌄</span></summary>
-<div class="content">
-  <div class="item"><div class="time">Vormittag</div><div><h3>Peace Forest Park / Heiwajima</h3><p>Entspannter Familientag mit Field Athletic und Zeit zur Erholung.</p></div></div>
-  <div class="item"><div class="time">Nachmittag</div><div><h3>Fahrt nach Shibuya</h3><p>Welcome Suica nutzen. Reisepässe für einen möglichen Tax-Free-Einkauf mitnehmen.</p><div class="tags"><span class="tag move">Welcome Suica</span><span class="tag warn">Reisepässe mitnehmen</span></div></div></div>
-  <div class="item"><div class="time">15:30–19:00</div><div><h3>Shoppingrunde</h3><p>UNIQLO Dōgenzaka → WEGO in SHIBUYA109 → GU Shibuya → ABC-MART Grand Stage. Optional ZARA oder 2nd STREET.</p><div class="tags"><span class="tag">UNIQLO</span><span class="tag">WEGO</span><span class="tag">GU</span><span class="tag">ABC-MART</span></div></div></div>
-</div>
-</details>
 
-<details class="day today" id="d1207" open>
-<summary><span class="date">12.07.</span><span class="title">Kaiserpalast → Akihabara<span class="subtitle">Außenanlagen und East Gardens, danach Elektronik, Games, Anime und Gachapon.</span></span><span class="chev">⌄</span></summary>
-<div class="content">
-  <div class="item"><div class="time">09:00</div><div><h3>Riverside Omori verlassen</h3><p>Mit Welcome Suica Richtung Tokyo Station beziehungsweise Otemachi fahren. Wasser, Sonnenschutz und Kopfbedeckungen mitnehmen.</p><div class="tags"><span class="tag move">Welcome Suica</span><span class="tag warn">Hitze beachten</span></div></div></div>
-  <div class="item"><div class="time">10:00–11:45</div><div><h3>Kaiserpalast und East Gardens</h3><p>Vom Bereich Tokyo Station/Otemachi zu den Außenanlagen und zum Ōte-mon-Eingang gehen. East Gardens, Steinmauern, Wachtürme und Garten ansehen. Der eigentliche Palast ist nicht frei zugänglich.</p><div class="tags"><a class="tag" href="https://www.kunaicho.go.jp/en/visit/" target="_blank" rel="noopener">Offizielle Besucherinfos ↗</a><span class="tag">Kostenlos</span></div></div></div>
-  <div class="item"><div class="time">11:45–12:30</div><div><h3>Mittagessen nahe Tokyo Station</h3><p>Leicht und unkompliziert essen. Alternativ direkt nach Akihabara fahren und dort Mittag machen.</p><div class="tags"><span class="tag food">Mittagessen</span></div></div></div>
-  <div class="item"><div class="time">12:30–13:00</div><div><h3>Tokyo Station → Akihabara</h3><p>JR Yamanote Line oder Keihin-Tōhoku Line. Akihabara liegt nur zwei Stationen von Tokyo Station entfernt.</p><div class="tags"><span class="tag move">JR</span><span class="tag cost">Welcome Suica</span></div></div></div>
-  <div class="item"><div class="time">13:00–14:00</div><div><h3>Yodobashi Akiba</h3><p>Elektronik, Spielzeug, Modellbau und Gaming. Guter Einstieg mit klimatisierten Etagen und Toiletten.</p><div class="tags"><span class="tag">Elektronik</span><span class="tag">Spielzeug</span></div></div></div>
-  <div class="item"><div class="time">14:00–15:00</div><div><h3>GiGO / Arcade und Gachapon</h3><p>Greifautomaten, Rhythmusspiele, Rennspiele und Kapselautomaten. Vorher ein festes Budget pro Kind vereinbaren.</p><div class="tags"><span class="tag warn">Budget festlegen</span><span class="tag">Arcade</span></div></div></div>
-  <div class="item"><div class="time">15:00–16:00</div><div><h3>Super Potato</h3><p>Retrospiele und alte Konsolen ansehen. Die engen Etagen können voll sein; bei Müdigkeit nur kurz hineingehen.</p><div class="tags"><span class="tag">Retro-Gaming</span></div></div></div>
-  <div class="item"><div class="time">16:00–17:15</div><div><h3>Animate / Radio Kaikan / Mandarake</h3><p>Je nach Interesse einen oder zwei Läden auswählen. Nicht versuchen, alles abzulaufen.</p><div class="tags"><span class="tag">Anime</span><span class="tag">Figuren</span><span class="tag warn">Gezielt auswählen</span></div></div></div>
-  <div class="item"><div class="time">17:15–18:00</div><div><h3>Optional: Kanda Myōjin</h3><p>Ruhiger Gegenpol zu Akihabara, ungefähr zehn Minuten zu Fuß. Nur einbauen, wenn alle noch Energie haben.</p><div class="tags"><a class="tag" href="https://www.japan.travel/en/spot/1701/" target="_blank" rel="noopener">Kanda Myōjin ↗</a><span class="tag warn">Optional</span></div></div></div>
-  <div class="item"><div class="time">ab 18:00</div><div><h3>Abendessen und Rückfahrt</h3><p>In Akihabara essen oder bei Erschöpfung direkt zur Unterkunft zurückfahren. Das ursprünglich für heute geplante Ueno-Museum findet am 18.07. statt.</p><div class="tags"><span class="tag food">Abendessen</span><span class="tag move">Rückfahrt nach Shōwajima</span></div></div></div>
-</div>
-</details>
-
-<details class="day" id="d1307">
-<summary><span class="date">13.07.</span><span class="title">Asakusa FIX<span class="subtitle">Sensō-ji, Capybara Café 11:00–12:30, Samurai Ninja Museum.</span></span><span class="chev">⌄</span></summary>
-<div class="content">
-  <div class="item"><div class="time">09:00–10:30</div><div><h3>Sensō-ji und Nakamise</h3><p>Früh beginnen, bevor es sehr voll und heiß wird.</p></div></div>
-  <div class="item"><div class="time">11:00–12:30</div><div><h3>Capybara Café</h3><p>Feste Reservierung.</p><div class="tags"><span class="tag book">Reserviert</span></div></div></div>
-  <div class="item"><div class="time">14:00–15:15</div><div><h3>Samurai Ninja Museum</h3><p>Führung und Mitmachanteile.</p></div></div>
-</div>
-</details>
-
-<details class="day" id="d1407">
-<summary><span class="date">14.07.</span><span class="title">Shinkansen + Hakone Golden Route<span class="subtitle">Shinagawa → Odawara, danach Hakone-Rundroute.</span></span><span class="chev">⌄</span></summary>
-<div class="content">
-  <div class="item"><div class="time">06:20</div><div><h3>Riverside Omori verlassen</h3><p>Snacks und Getränke am Vorabend kaufen.</p></div></div>
-  <div class="item"><div class="time">07:00–07:30</div><div><h3>Tōkaidō-Shinkansen</h3><p>Nur einen Zug wählen, der in Odawara hält.</p><div class="tags"><span class="tag book">Shinkansen prüfen/buchen</span></div></div></div>
-</div>
-</details>
-
-<details class="day" id="d1507">
-<summary><span class="date">15.07.</span><span class="title">Ruhetag Omori/Shinagawa<span class="subtitle">Ausschlafen, Wäsche und lokales Essen.</span></span><span class="chev">⌄</span></summary>
-<div class="content"><div class="item"><div class="time">Vormittag</div><div><h3>Regeneration</h3><p>Ausschlafen, Wäsche und Fotos sichern.</p></div></div></div>
-</details>
-
-<details class="day" id="d1607">
-<summary><span class="date">16.07.</span><span class="title">Tsukiji → teamLab Borderless → Azabudai<span class="subtitle">Der Markt ersetzt den Tokyo Tower.</span></span><span class="chev">⌄</span></summary>
-<div class="content">
-  <div class="item"><div class="time">08:30–11:00</div><div><h3>Tsukiji Outer Market</h3><p>Probierfrühstück und früher Lunch.</p></div></div>
-  <div class="item"><div class="time">12:30–15:30</div><div><h3>teamLab Borderless</h3><p>Frühen Nachmittagsslot buchen.</p><div class="tags"><span class="tag book">Ticket erforderlich</span></div></div></div>
-</div>
-</details>
-
-<details class="day" id="d1707">
-<summary><span class="date">17.07.</span><span class="title">Kamakura + Enoshima – Nachholtermin<span class="subtitle">Großer Buddha, Hase-dera, Enoden und Meer. Früher Start ab Shōwajima.</span></span><span class="chev">⌄</span></summary>
-<div class="content">
-  <div class="item"><div class="time">06:15</div><div><h3>Riverside Omori verlassen</h3><p>Zur Station Shōwajima gehen. Konbini-Frühstück, Sonnenschutz und ausreichend Getränke mitnehmen.</p><div class="tags"><span class="tag warn">Früh starten</span><span class="tag move">Shōwajima</span></div></div></div>
-  <div class="item"><div class="time">ca. 06:35</div><div><h3>Shōwajima → Tenkūbashi → Yokohama</h3><p>Tokyo Monorail nach Tenkūbashi, dort zur Keikyū-Linie Richtung Yokohama wechseln.</p><div class="tags"><span class="tag move">Monorail + Keikyū</span></div></div></div>
-  <div class="item"><div class="time">ca. 07:25–07:55</div><div><h3>Yokohama → Kamakura</h3><p>JR Yokosuka Line Richtung Zushi, Yokosuka oder Kurihama.</p><div class="tags"><span class="tag move">JR Yokosuka Line</span></div></div></div>
-  <div class="item"><div class="time">08:20–09:15</div><div><h3>Großer Buddha – Kōtoku-in</h3><p>Von Hase etwa 10–15 Minuten zu Fuß. Früh besuchen.</p><div class="tags"><a class="tag" href="https://www.kotoku-in.jp/en/" target="_blank" rel="noopener">Kōtoku-in ↗</a></div></div></div>
-  <div class="item"><div class="time">09:25–11:00</div><div><h3>Hase-dera</h3><p>Tempel, Garten und Aussichtspunkt.</p><div class="tags"><a class="tag" href="https://www.hasedera.jp/en/" target="_blank" rel="noopener">Hase-dera ↗</a></div></div></div>
-  <div class="item"><div class="time">ca. 11:30</div><div><h3>Hase → Enoshima</h3><p>Enoden Richtung Fujisawa. Küstenfahrt genießen.</p><div class="tags"><span class="tag move">Enoden</span></div></div></div>
-  <div class="item"><div class="time">12:00–13:30</div><div><h3>Enoshima und Mittagessen</h3><p>Tobiccho für Shirasu; alternativ Uomitei oder Il Chianti Cafe Enoshima.</p><div class="tags"><span class="tag food">Mittagessen</span></div></div></div>
-  <div class="item"><div class="time">13:30–16:00</div><div><h3>Enoshima Shrine → Escar → Sea Candle</h3><p>Iwaya-Höhlen nur bei genügend Energie und mäßiger Hitze.</p><div class="tags"><span class="tag warn">Iwaya optional</span><a class="tag" href="https://en.enoshima-seacandle.com/" target="_blank" rel="noopener">Sea Candle ↗</a></div></div></div>
-  <div class="item"><div class="time">ab 16:30</div><div><h3>Rückfahrt über Fujisawa und Yokohama</h3><p>Alle Bahnfahrten mit Welcome Suica. Kein Enoden-Tagespass nötig.</p><div class="tags"><span class="tag move">Welcome Suica</span><span class="tag warn">Kein Noriorikun</span></div></div></div>
-  <div class="item"><div class="time">Kosten</div><div><h3>Ungefähre Bahnfahrtkosten</h3>
-    <table class="fare-table">
-      <thead><tr><th>Strecke</th><th>Erw.</th><th>Kind</th><th>Familie 2+2</th></tr></thead>
-      <tbody>
-        <tr><td>Shōwajima → Kamakura</td><td>ca. 900 ¥</td><td>ca. 450 ¥</td><td>ca. 2.700 ¥</td></tr>
-        <tr><td>Enoden gesamt</td><td>ca. 680 ¥</td><td>ca. 340 ¥</td><td>ca. 2.040 ¥</td></tr>
-        <tr><td>Fujisawa → Shōwajima</td><td>ca. 900 ¥</td><td>ca. 450 ¥</td><td>ca. 2.700 ¥</td></tr>
-        <tr class="fare-total"><td>Gesamt Bahn</td><td>ca. 2.480 ¥</td><td>ca. 1.240 ¥</td><td>ca. 7.440 ¥</td></tr>
-      </tbody>
-    </table>
-  </div></div>
-</div>
-</details>
-
-<details class="day" id="d1807">
-<summary><span class="date">18.07.</span><span class="title">Ueno: Naturkundemuseum → Park → Ameyoko<span class="subtitle">Der ursprünglich für den 12.07. geplante Museumstag.</span></span><span class="chev">⌄</span></summary>
-<div class="content">
-  <div class="item"><div class="time">09:30–12:30</div><div><h3>National Museum of Nature and Science</h3><p>Dinosaurier, Tiere, Naturwissenschaft und Technik.</p></div></div>
-  <div class="item"><div class="time">13:00–15:00</div><div><h3>Ueno Park und Ameyoko</h3><p>Spaziergang, Snacks und kleine Geschäfte.</p></div></div>
-  <div class="item"><div class="time">17:00</div><div><h3>Ramen in Ueno</h3><p>Der Ramen-Fixpunkt wird auf diesen Tag verschoben.</p><div class="tags"><span class="tag food">Ramen</span></div></div></div>
-</div>
-</details>
-
-<details class="day" id="d1907">
-<summary><span class="date">19.07.</span><span class="title">Yokohama: Cup Noodles → Minato Mirai → Yakiniku<span class="subtitle">Eigene Cup Noodles, Hafen und Grillen am Tisch.</span></span><span class="chev">⌄</span></summary>
-<div class="content">
-  <div class="item"><div class="time">10:00–13:00</div><div><h3>Cup Noodles Museum</h3><p>Eintritt plus MY CUPNOODLES Factory Voucher buchen.</p><div class="tags"><span class="tag book">Reservierung prüfen</span></div></div></div>
-  <div class="item"><div class="time">17:00–18:30</div><div><h3>Yakiniku</h3><p>Yakiniku Ushisuke Yokohama-Minatomirai.</p><div class="tags"><span class="tag food">Yakiniku</span></div></div></div>
-</div>
-</details>
-
-<details class="day" id="d2007">
-<summary><span class="date">20.07.</span><span class="title">Marine Day: flexibler Familientag<span class="subtitle">Feiertag und verbleibender Puffer.</span></span><span class="chev">⌄</span></summary>
-<div class="content"><div class="item"><div class="time">später Start</div><div><h3>Puffer bewusst offen halten</h3><p>Erholung, Joypolis, Trick Art Museum oder Lieblingsviertel wiederholen.</p></div></div></div>
-</details>
-
-<details class="day" id="d2107">
-<summary><span class="date">21.07.</span><span class="title">Shopping, Souvenirs und Packen<span class="subtitle">Kein großer Ausflug mehr.</span></span><span class="chev">⌄</span></summary>
-<div class="content"><div class="item"><div class="time">10:00–15:00</div><div><h3>Gezieltes Shopping und Packen</h3><p>Nur wenige Ziele; früh zur Unterkunft zurück.</p></div></div></div>
-</details>
-
-<details class="day" id="d2207">
-<summary><span class="date">22.07.</span><span class="title">Abreise Haneda<span class="subtitle">Direkt zum Flughafen.</span></span><span class="chev">⌄</span></summary>
-<div class="content"><div class="item"><div class="time">Morgens</div><div><h3>Abreise</h3><p>Kein Zusatzprogramm.</p></div></div></div>
-</details>
-
-<h2 id="buchungen" class="section-title">Buchungen & Tagesprüfungen</h2>
-<ul class="checklist">
-  <li><b>12.07. Kaiserpalast:</b> Vor Abfahrt aktuelle Hinweise der Imperial Household Agency prüfen; East Gardens sind kostenlos.</li>
-  <li><b>13.07.:</b> Capybara Café ist fest reserviert.</li>
-  <li><b>14.07. Hakone:</b> Shinkansen-Verbindung und Verkehrsstatus prüfen.</li>
-  <li><b>16.07.:</b> teamLab Borderless buchen.</li>
-  <li><b>17.07. Kamakura:</b> nichts vorab buchen; alle Bahnfahrten mit Welcome Suica.</li>
-  <li><b>19.07.:</b> Cup Noodles Museum und Yakiniku reservieren.</li>
-</ul>
-
-<h2 id="essen" class="section-title">Essen-Fixpunkte</h2>
-<div class="summary">
-  <div class="pill"><b>Kaiten-Sushi</b>10.07.</div>
-  <div class="pill"><b>Ramen</b>18.07. Ueno</div>
-  <div class="pill"><b>Tsukiji</b>16.07.</div>
-  <div class="pill"><b>Yakiniku</b>19.07.</div>
-</div>
-
-<p class="small">In Safari öffnen, Teilen-Symbol antippen und „Zum Home-Bildschirm“ wählen. Stand: 12.07.2026.</p>
-</main>
-</body>
-</html>
+<details class="day" id="d1507"><summary><span class="date">15.07.</span><span class="title">Ruhetag Omori/Shinagawa <span class="status next">⏳ Kommend</span><span class="subtitle">Ausschlafen, Wäsche und lokales Essen.</span></span><span class="chev">⌄</span></summary><div class="content"><div class="item"><div class="time">Plan</div><div><h3>Ruhetag Omori/Shinagawa</h3><p>Ausschlafen, Wäsche und lokales Essen.</p></div></div></div></details>
+<details class="day" id="d1607"><summary><span class="date">16.07.</span><span class="title">Tsukiji → teamLab Borderless → Azabudai <span class="status next">⏳ Kommend</span><span class="subtitle">Markt und digitales Kunstmuseum.</span></span><span class="chev">⌄</span></summary><div class="content"><div class="item"><div class="time">Plan</div><div><h3>Tsukiji → teamLab Borderless → Azabudai</h3><p>Markt und digitales Kunstmuseum.</p></div></div></div></details>
+<details class="day" id="d1707"><summary><span class="date">17.07.</span><span class="title">Kamakura + Enoshima – Nachholtermin <span class="status next">⏳ Kommend</span><span class="subtitle">Großer Buddha, Hase-dera, Enoden und Meer.</span></span><span class="chev">⌄</span></summary><div class="content"><div class="item"><div class="time">Plan</div><div><h3>Kamakura + Enoshima – Nachholtermin</h3><p>Großer Buddha, Hase-dera, Enoden und Meer.</p></div></div></div></details>
+<details class="day" id="d1807"><summary><span class="date">18.07.</span><span class="title">Ueno <span class="status next">⏳ Kommend</span><span class="subtitle">Naturkundemuseum, Park, Ameyoko und Ramen.</span></span><span class="chev">⌄</span></summary><div class="content"><div class="item"><div class="time">Plan</div><div><h3>Ueno</h3><p>Naturkundemuseum, Park, Ameyoko und Ramen.</p></div></div></div></details>
+<details class="day" id="d1907"><summary><span class="date">19.07.</span><span class="title">Yokohama <span class="status next">⏳ Kommend</span><span class="subtitle">Cup Noodles Museum, Minato Mirai und Yakiniku.</span></span><span class="chev">⌄</span></summary><div class="content"><div class="item"><div class="time">Plan</div><div><h3>Yokohama</h3><p>Cup Noodles Museum, Minato Mirai und Yakiniku.</p></div></div></div></details>
+<details class="day" id="d2007"><summary><span class="date">20.07.</span><span class="title">Marine Day <span class="status next">⏳ Kommend</span><span class="subtitle">Flexibler Familientag und Puffer.</span></span><span class="chev">⌄</span></summary><div class="content"><div class="item"><div class="time">Plan</div><div><h3>Marine Day</h3><p>Flexibler Familientag und Puffer.</p></div></div></div></details>
+<details class="day" id="d2107"><summary><span class="date">21.07.</span><span class="title">Shopping, Souvenirs und Packen <span class="status next">⏳ Kommend</span><span class="subtitle">Kein großer Ausflug mehr.</span></span><span class="chev">⌄</span></summary><div class="content"><div class="item"><div class="time">Plan</div><div><h3>Shopping, Souvenirs und Packen</h3><p>Kein großer Ausflug mehr.</p></div></div></div></details>
+<details class="day" id="d2207"><summary><span class="date">22.07.</span><span class="title">Abreise Haneda <span class="status next">⏳ Kommend</span><span class="subtitle">Direkt zum Flughafen.</span></span><span class="chev">⌄</span></summary><div class="content"><div class="item"><div class="time">Plan</div><div><h3>Abreise Haneda</h3><p>Direkt zum Flughafen.</p></div></div></div></details>
+<p style="font-size:.88rem;color:var(--muted)">In Safari öffnen, Teilen-Symbol antippen und „Zum Home-Bildschirm“ wählen. Stand: 14.07.2026 · Version 5.</p>
+</main><script>if("serviceWorker" in navigator){navigator.serviceWorker.register("./sw.js")}</script></body></html>
